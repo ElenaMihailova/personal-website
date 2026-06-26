@@ -11,7 +11,7 @@ import { data } from '@/data/data';
 function HomePage() {
   return (
     <>
-      <Section className="hero" id={''}>
+      <Section className="hero" id="home">
         <Illustration alt="" className="hero__illustration" src={heroIllustration} />
         <h1 className="hero__greeting">
           {data.hero.greeting} <span>{data.hero.name}</span>

@@ -9,10 +9,6 @@ export const data: SiteData = {
         degree: 'Bachelor of Science in Computer Science',
         school: 'Moscow State University of Economics, Statistics and Informatics',
       },
-      {
-        degree: 'Bachelor of Science in Computer Science',
-        school: 'Moscow State University of Economics, Statistics and Informatics',
-      },
     ],
   },
   contacts: {

@@ -1,8 +1,10 @@
+import classNames from 'classnames';
+
 import type { NavProps } from './nav.props';
 
-function Nav({ links }: NavProps) {
+function Nav({ className, id, links }: NavProps) {
   return (
-    <nav aria-label="Primary" className="header__nav nav">
+    <nav id={id} aria-label="Primary" className={classNames('nav', className)}>
       <ul>
         {links.map((link) => (
           <li key={link.id}>

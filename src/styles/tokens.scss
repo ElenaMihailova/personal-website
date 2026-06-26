@@ -1,0 +1,26 @@
+:root {
+  --color-ink: #14161a;
+  --color-paper: #f7f7f4;
+  --color-signal: #2a2ae6;
+  --color-sky: #a1d2ff;
+  --color-mute: #8a8f98;
+  --color-bg: var(--color-paper);
+  --color-text: var(--color-ink);
+  --color-accent: var(--color-signal);
+  --color-social: var(--color-sky);
+  --color-muted: var(--color-mute);
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* font size — fluid, mobile-first */
+  --font-size-display: clamp(2.5rem, 6vw + 1rem, 4.5rem);
+  --font-size-heading: clamp(2rem, 3vw + 1rem, 2.5rem);
+  --font-size-body: 1.125rem;
+  --font-size-label: 0.8125rem;
+
+  /* misc */
+  --line-height-body: 1.6;
+  --letter-spacing-label: 0.08em;
+}

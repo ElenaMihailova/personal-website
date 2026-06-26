@@ -1,0 +1,10 @@
+.social-links__list {
+  display: flex;
+  gap: 12px;
+}
+
+.social-links__icon {
+  width: 28px;
+  height: 28px;
+  color: var(--color-social);
+}
