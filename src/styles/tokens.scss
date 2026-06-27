@@ -3,13 +3,16 @@
   --color-paper: #f7f7f4;
   --color-signal: #2a2ae6;
   --color-sky: #a1d2ff;
+  --color-gray: #cfcfcf;
   --color-mute: #8a8f98;
   --color-bg: var(--color-paper);
   --color-text: var(--color-ink);
   --color-accent: var(--color-signal);
+  --color-accent-soft: #e8e9ff;
+  --color-surface: var(--color-gray);
   --color-social: var(--color-sky);
+  --color-nav-link: var(--color-gray);
   --color-muted: var(--color-mute);
-
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'IBM Plex Sans', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;

@@ -1,11 +1,12 @@
 .header {
   padding: 12px 16px;
+  position: relative;
   width: 100%;
 }
 
 .header__bar {
-  display: flex;
   align-items: center;
+  display: flex;
   gap: 16px;
 }
 
@@ -14,7 +15,13 @@
 }
 
 .header_open .header__nav {
+  background-color: var(--color-bg);
   display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  z-index: 2;
 }
 
 .header__social-links {
@@ -22,6 +29,6 @@
 }
 
 .header__logo {
-  width: 32px;
   height: 32px;
+  width: 32px;
 }

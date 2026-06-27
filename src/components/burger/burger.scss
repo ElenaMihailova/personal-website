@@ -2,29 +2,31 @@
 
 .burger {
   @include reset-button;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
   height: 24px;
+  justify-content: space-between;
   padding: 6px 3px;
+  width: 24px;
 }
 
 .burger__line {
-  width: 100%;
-  height: 2px;
+  @include transition(transform, opacity);
+
   background-color: var(--color-text);
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
+  height: 2px;
+  width: 100%;
 }
 
 .burger_open .burger__line:nth-child(1) {
   transform: translateY(5px) rotate(45deg);
 }
+
 .burger_open .burger__line:nth-child(2) {
   opacity: 0;
 }
+
 .burger_open .burger__line:nth-child(3) {
   transform: translateY(-5px) rotate(-45deg);
 }

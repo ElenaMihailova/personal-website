@@ -1,38 +1,21 @@
-import aboutIllustration from '@/assets/images/about.svg';
+import './home-page.scss';
+
 import contactIllustration from '@/assets/images/contact.svg';
-import heroIllustration from '@/assets/images/hero.svg';
 import skillsllustration from '@/assets/images/skills.svg';
 import Illustration from '@/components/illustration/illustration';
 import Section from '@/components/section';
 import SocialLinks from '@/components/social-links';
 import Title from '@/components/title';
 import { data } from '@/data/data';
+import About from '@/sections/about/about';
+import Hero from '@/sections/hero/hero';
 
 function HomePage() {
   return (
-    <>
-      <Section className="hero" id="home">
-        <Illustration alt="" className="hero__illustration" src={heroIllustration} />
-        <h1 className="hero__greeting">
-          {data.hero.greeting} <span>{data.hero.name}</span>
-        </h1>
-        <p>{data.hero.role}</p>
-      </Section>
-      <Section className="about" id={'about'}>
-        <Illustration alt="" className="about__illustration" src={aboutIllustration} />
-        <Title className="about__title">{data.about.title}</Title>
-        <button>Personal</button>
-        <p>{data.about.description}</p>
-        <button>Education</button>
-        <div>
-          {data.about.education.map((item, index) => (
-            <div key={index}>
-              <h3>{item.degree}</h3>
-              <p>{item.school}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
+    <main className="home-page">
+      <Hero hero={data.hero} />
+      <About about={data.about} />
+
       <Section className="skills" id={'skills'}>
         <Illustration alt="" className="skills__illustration" src={skillsllustration} />
         <Title className="skills__title">{data.skills.title}</Title>
@@ -55,7 +38,7 @@ function HomePage() {
         <SocialLinks showLabel socials={data.socials} />
         <Illustration alt="" className="contact__illustration" src={contactIllustration} />
       </Section>
-    </>
+    </main>
   );
 }
 

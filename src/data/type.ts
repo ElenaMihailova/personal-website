@@ -17,13 +17,14 @@ export interface HeroData {
   role: string;
 }
 
-interface EducationItem {
+export interface EducationItem {
   degree: string;
+  period: string;
   school: string;
 }
 
 export interface AboutData {
-  description: string;
+  description: string[];
   education: EducationItem[];
   title: string;
 }

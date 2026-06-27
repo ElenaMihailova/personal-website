@@ -3,11 +3,27 @@ import type { SiteData } from './type';
 export const data: SiteData = {
   about: {
     title: 'About me',
-    description: `I am a frontend developer with a passion for creating beautiful and functional web applications. I have experience working with React, TypeScript, and other modern web technologies. I am always eager to learn new skills and take on new challenges.`,
+    description: [
+      'Frontend developer (React, TypeScript) building payment and checkout experiences in money-critical products — subscriptions, one-time payments, promo pricing, admin payment flows.',
+      'Before tech, I spent 15 years as a chief accountant, so I read payment and financial logic from the inside.',
+      'Day to day: React, TypeScript, Next.js, config-driven architecture, testing-first (Jest, Playwright) — and I ship features with AI coding agents as a force multiplier, making the design calls and validating every change.',
+      'Outside work, I run long distance. Same thing I look for in code: steady, deliberate, honest about the numbers.',
+    ],
     education: [
       {
-        degree: 'Bachelor of Science in Computer Science',
-        school: 'Moscow State University of Economics, Statistics and Informatics',
+        degree: 'JavaScript / Frontend',
+        period: '2022 – 2023',
+        school: 'The Rolling Scopes School',
+      },
+      {
+        degree: 'Frontend Development',
+        period: '2021 – 2022',
+        school: 'HTML Academy',
+      },
+      {
+        degree: 'Accounting, Analysis and Audit',
+        period: '1997 – 2002',
+        school: 'Petrozavodsk State University',
       },
     ],
   },
@@ -22,8 +38,8 @@ export const data: SiteData = {
   },
   links: [
     { id: 'start', label: 'Start' },
-    { id: 'about', label: 'About' },
-    { id: 'portfolio', label: 'Portfolio' },
+    { id: 'about', label: 'About me' },
+    { id: 'portfolio', label: 'Skills' },
     { id: 'contact', label: 'Contacts' },
   ],
   skills: {
