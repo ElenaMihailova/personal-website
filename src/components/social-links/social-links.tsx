@@ -25,10 +25,15 @@ function SocialLinks({ className, showLabel, socials }: SocialLinksProps) {
         {socials.map((social) => {
           const IconComponent = SocialIcon[social.type];
           return (
-            <li key={social.type}>
-              <a href={social.href} rel="noopener noreferrer" target="_blank">
+            <li className="social-links__item" key={social.type}>
+              <a
+                className="social-links__link"
+                href={social.href}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <IconComponent className="social-links__icon" />
-                {showLabel && <p>{social.label}</p>}
+                {showLabel && <p className="social-links__label">{social.label}</p>}
               </a>
             </li>
           );

@@ -1,13 +1,14 @@
+import { SectionId } from './section-id';
 import type { SiteData } from './type';
 
 export const data: SiteData = {
   about: {
     title: 'About me',
     description: [
-      'Frontend developer (React, TypeScript) building payment and checkout experiences in money-critical products — subscriptions, one-time payments, promo pricing, admin payment flows.',
+      'Frontend developer (React, TypeScript) building payment and checkout features in money-critical products — subscriptions, one-time payments, promo pricing, admin payment flows.',
       'Before tech, I spent 15 years as a chief accountant, so I read payment and financial logic from the inside.',
-      'Day to day: React, TypeScript, Next.js, config-driven architecture, testing-first (Jest, Playwright) — and I ship features with AI coding agents as a force multiplier, making the design calls and validating every change.',
-      'Outside work, I run long distance. Same thing I look for in code: steady, deliberate, honest about the numbers.',
+      'Day to day: React, TypeScript, Next.js, config-driven architecture, testing-first (Jest, Playwright). I use AI coding agents to work faster — but I make the decisions and check every change.',
+      'Outside work, I run long distance — the same steadiness I bring to code.',
     ],
     education: [
       {
@@ -37,33 +38,36 @@ export const data: SiteData = {
     role: "I'm Frontend Developer",
   },
   links: [
-    { id: 'start', label: 'Start' },
-    { id: 'about', label: 'About me' },
-    { id: 'portfolio', label: 'Skills' },
-    { id: 'contact', label: 'Contacts' },
+    { id: SectionId.HERO, label: 'Start' },
+    { id: SectionId.ABOUT, label: 'About me' },
+    { id: SectionId.SKILLS, label: 'Skills' },
+    { id: SectionId.CONTACTS, label: 'Contacts' },
   ],
   skills: {
     hard: [
-      'TypeScript (strict)',
-      'React 19 — hooks, context, modern patterns',
+      'React — hooks, context, modern patterns',
+      'TypeScript',
+      'Next.js (SSR/SSG, routing)',
       'State management: Redux Toolkit, MobX',
       'REST API integration',
-      'Responsive, cross-browser, accessible layout (SCSS, Tailwind)',
       'Payment integrations (Stripe, Klarna)',
       'Config-driven UI architecture',
+      'Responsive, cross-browser, accessible layout (SCSS, Tailwind)',
+      'Figma → code (design handoff)',
+      'i18n / localization',
       'Performance optimization (Core Web Vitals, loading speed)',
-      'Unit & component testing (Jest, React Testing Library)',
-      'Build tooling: Vite, Webpack, npm-scripts',
-      'Git & CI/CD',
+      'Unit, component & E2E testing (Jest, React Testing Library, Playwright)',
+      'Storybook / component-driven development',
+      'Git, CI/CD & build tooling (Vite, Webpack, npm-scripts)',
       'Building production features with AI coding agents',
-      'SVG graphics, Figma',
     ],
     soft: [
-      'Decomposing vague requirements into clear, shippable tasks',
-      'Ownership: features from idea to production',
-      'Critical evaluation of AI-generated code',
-      'Cross-domain communication (15 years in finance → business language)',
-      'Fast, self-driven learning of new tools',
+      'Strong on payment & money logic (15 years in finance)',
+      'Turning vague requirements into clear, workable tasks',
+      'Questioning assumptions, not taking specs at face value',
+      'Care with detail on money-critical UI',
+      'Direct, constructive feedback in code review',
+      'Reliable delivery, end to end',
     ],
     title: 'Skills',
   },

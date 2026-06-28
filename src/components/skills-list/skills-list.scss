@@ -1,0 +1,21 @@
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skills-list__item {
+  padding-left: 1.75rem;
+  position: relative;
+}
+
+.skills-list__item::before {
+  background-color: var(--color-accent);
+  content: '';
+  height: 14px;
+  left: 0;
+  mask: url('../../assets/icons/list.svg') no-repeat center / contain;
+  position: absolute;
+  top: 0.35em;
+  width: 14px;
+}

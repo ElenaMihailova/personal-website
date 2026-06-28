@@ -23,3 +23,9 @@ $transition-timing: ease;
   letter-spacing: 0.02em;
   line-height: 1.15;
 }
+
+@mixin text-base {
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}

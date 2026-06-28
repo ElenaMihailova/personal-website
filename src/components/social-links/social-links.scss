@@ -9,3 +9,16 @@
   height: 28px;
   width: 28px;
 }
+
+.social-links__link {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.social-links__label {
+  color: var(--color-accent);
+  font-size: 18px;
+  font-weight: 500;
+}

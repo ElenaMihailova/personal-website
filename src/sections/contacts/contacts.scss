@@ -1,0 +1,24 @@
+.contacts {
+  gap: 20px;
+}
+
+.contacts__title {
+  width: 80%;
+}
+
+.contacts__description {
+  text-align: start;
+}
+
+.contacts__list {
+  .social-links__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-links__icon {
+    color: var(--color-accent);
+    height: 32px;
+    width: 32px;
+  }
+}

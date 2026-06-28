@@ -1,3 +1,5 @@
+import type { SectionId } from './section-id';
+
 export type SocialType = 'github' | 'telegram' | 'linkedin' | 'email';
 
 export interface Social {
@@ -7,7 +9,7 @@ export interface Social {
 }
 
 export interface NavLink {
-  id: string;
+  id: SectionId;
   label: string;
 }
 

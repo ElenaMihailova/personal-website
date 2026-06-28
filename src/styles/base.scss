@@ -18,6 +18,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--font-size-body);
   -webkit-font-smoothing: antialiased;
+  letter-spacing: var(--letter-spacing-base);
   line-height: var(--line-height-body);
   min-height: 100vh;
 }
@@ -37,4 +38,10 @@ a {
 ul {
   list-style: none;
   padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
 }

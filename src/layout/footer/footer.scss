@@ -1,0 +1,21 @@
+.footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 16px 40px;
+}
+
+.footer__back-to-top {
+  width: fit-content;
+}
+
+.footer__icon {
+  height: 52px;
+  width: 52px;
+}
+
+.footer__text {
+  color: var(--color-accent);
+  font-size: 14px;
+  font-weight: 500;
+}
