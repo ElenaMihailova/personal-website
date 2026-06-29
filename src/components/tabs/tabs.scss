@@ -46,10 +46,10 @@
   text-align: start;
 }
 
-.tabs_panel {
+.tabs__panel {
   grid-area: 1/1;
 }
 
-.tabs_panel[aria-hidden='true'] {
+.tabs__panel[aria-hidden='true'] {
   visibility: hidden;
 }

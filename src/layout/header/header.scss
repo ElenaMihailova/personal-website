@@ -10,6 +10,15 @@
   top: 0;
   width: 100%;
   z-index: 100;
+
+  @include tablet {
+    padding: 16px 32px;
+  }
+
+  @include desktop {
+    display: contents;
+    position: static;
+  }
 }
 
 .header__nav {
@@ -33,13 +42,34 @@
     inset: auto;
     position: static;
   }
+
+  @include desktop {
+    left: max(32px, calc(50% - var(--layout-max-width) / 2));
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .header__social-links {
   margin-left: auto;
+
+  @include desktop {
+    margin-left: 0;
+    position: fixed;
+    right: max(32px, calc(50% - var(--layout-max-width) / 2));
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .header__logo {
   height: 32px;
   width: 32px;
+
+  @include desktop {
+    left: max(32px, calc(50% - var(--layout-max-width) / 2));
+    position: fixed;
+    top: 32px;
+  }
 }

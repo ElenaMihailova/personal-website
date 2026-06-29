@@ -1,3 +1,5 @@
+import './about.scss';
+
 import aboutIllustration from '@/assets/images/about.svg';
 import Education from '@/components/education';
 import Illustration from '@/components/illustration';
@@ -12,27 +14,29 @@ function About({ about }: AboutProps) {
   return (
     <Section className="about" id={SectionId.ABOUT}>
       <Illustration alt="" className="about__illustration" src={aboutIllustration} />
-      <Title className="about__title">{about.title}</Title>
-      <Tabs
-        items={[
-          {
-            id: 'personal',
-            label: 'Personal',
-            content: (
-              <div>
-                {about.description.map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
-              </div>
-            ),
-          },
-          {
-            id: 'education',
-            label: 'Education',
-            content: <Education items={about.education} />,
-          },
-        ]}
-      />
+      <div className="about__content">
+        <Title className="about__title">{about.title}</Title>
+        <Tabs
+          items={[
+            {
+              id: 'personal',
+              label: 'Personal',
+              content: (
+                <div>
+                  {about.description.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
+                </div>
+              ),
+            },
+            {
+              id: 'education',
+              label: 'Education',
+              content: <Education items={about.education} />,
+            },
+          ]}
+        />
+      </div>
     </Section>
   );
 }

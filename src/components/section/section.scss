@@ -1,6 +1,17 @@
+@use 'breakpoints' as *;
+
 .section {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 25px;
   padding: 25px 16px;
+
+  @include tablet {
+    flex-direction: row;
+    padding: 25px 56px;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
 }

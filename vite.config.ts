@@ -13,4 +13,7 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    allowedHosts: ['madalynn-unbatterable-permissively.ngrok-free.dev'],
+  },
 });

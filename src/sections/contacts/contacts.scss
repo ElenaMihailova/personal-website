@@ -6,6 +6,12 @@
   width: 80%;
 }
 
+.contacts__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .contacts__description {
   text-align: start;
 }

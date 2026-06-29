@@ -28,7 +28,7 @@ function Tabs({ items }: TabsProps) {
         {items.map((item) => (
           <div
             key={item.id}
-            className="tabs_panel"
+            className="tabs__panel"
             role="tabpanel"
             aria-hidden={item.id !== activeId}
           >

@@ -9,7 +9,7 @@ import Icon from '@/components/icon';
 import Nav from '@/components/nav/nav';
 import SocialLinks from '@/components/social-links';
 import { data } from '@/data/data';
-import { useActiveSection, useDismiss, useIsScrolling } from '@/hooks';
+import { useActiveSection, useDismiss } from '@/hooks';
 
 const SECTION_IDS = data.links.map((link) => link.id);
 
@@ -19,15 +19,11 @@ function Header() {
 
   const handleClose = useCallback(() => setIsOpen(false), []);
   const activeId = useActiveSection(SECTION_IDS);
-  const isScrolling = useIsScrolling();
 
   useDismiss(headerRef, isOpen, handleClose);
 
   return (
-    <header
-      className={classNames('header', { header_open: isOpen, header_scrolling: isScrolling })}
-      ref={headerRef}
-    >
+    <header className={classNames('header', { header_open: isOpen })} ref={headerRef}>
       <Burger controls="primary-nav" isOpen={isOpen} onToggle={() => setIsOpen(!isOpen)} />
       <Icon alt="Logo" className="header__logo" src={LogoIcon} />
       <Nav

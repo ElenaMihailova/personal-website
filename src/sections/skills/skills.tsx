@@ -1,3 +1,5 @@
+import './skills.scss';
+
 import skillsllustration from '@/assets/images/skills.svg';
 import Illustration from '@/components/illustration';
 import Section from '@/components/section';
@@ -12,21 +14,23 @@ function Skills({ skills }: SkillsProps) {
   return (
     <Section className="skills" id={SectionId.SKILLS}>
       <Illustration alt="" className="skills__illustration" src={skillsllustration} />
-      <Title className="skills__title">{skills.title}</Title>
-      <Tabs
-        items={[
-          {
-            id: 'hard',
-            label: 'Hard Skills',
-            content: <SkillsList items={skills.hard} />,
-          },
-          {
-            id: 'soft',
-            label: 'Soft Skills',
-            content: <SkillsList items={skills.soft} />,
-          },
-        ]}
-      />
+      <div className="skills__content">
+        <Title className="skills__title">{skills.title}</Title>
+        <Tabs
+          items={[
+            {
+              id: 'hard',
+              label: 'Hard Skills',
+              content: <SkillsList items={skills.hard} />,
+            },
+            {
+              id: 'soft',
+              label: 'Soft Skills',
+              content: <SkillsList items={skills.soft} />,
+            },
+          ]}
+        />
+      </div>
     </Section>
   );
 }

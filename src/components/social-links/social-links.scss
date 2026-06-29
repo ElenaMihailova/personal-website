@@ -1,7 +1,13 @@
+@use 'breakpoints' as *;
+
 .social-links__list {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+
+  @include desktop {
+    flex-direction: column;
+  }
 }
 
 .social-links__icon {

@@ -1,6 +1,18 @@
+@use 'breakpoints' as *;
+
 .home-page {
   display: flex;
   flex: 1;
   flex-direction: column;
   gap: 50px;
+  max-width: 900px;
+
+  @include tablet {
+    gap: 25px;
+    padding: 40px 0;
+  }
+
+  @include desktop {
+    padding-top: 100px;
+  }
 }
