@@ -6,7 +6,9 @@
 }
 
 .footer__back-to-top {
-  width: fit-content;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__icon {

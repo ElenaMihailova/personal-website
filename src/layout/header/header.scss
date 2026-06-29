@@ -1,5 +1,10 @@
+@use 'breakpoints' as *;
+
 .header {
+  align-items: center;
   background-color: var(--color-bg);
+  display: flex;
+  gap: 16px;
   padding: 12px 16px;
   position: sticky;
   top: 0;
@@ -7,24 +12,27 @@
   z-index: 100;
 }
 
-.header__bar {
-  align-items: center;
-  display: flex;
-  gap: 16px;
-}
-
-.header .header__nav {
+.header__nav {
   display: none;
 }
 
-.header_open .header__nav {
+.header__nav {
   background-color: var(--color-bg);
-  display: block;
   left: 0;
   position: absolute;
   right: 0;
   top: 100%;
   z-index: 2;
+
+  .header_open & {
+    display: block;
+  }
+
+  @include tablet {
+    display: block;
+    inset: auto;
+    position: static;
+  }
 }
 
 .header__social-links {

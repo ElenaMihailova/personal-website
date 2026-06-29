@@ -1,0 +1,30 @@
+@use 'sass:map';
+
+$breakpoints: (
+  tablet: 768px,
+  desktop: 1280px,
+);
+
+@mixin respond($breakpoint) {
+  $value: map.get($breakpoints, $breakpoint);
+
+  @if not $value {
+    @error 'Unknown breakpoint: #{$breakpoint}. Available: #{map.keys($breakpoints)}.';
+  }
+
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include respond(tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include respond(desktop) {
+    @content;
+  }
+}

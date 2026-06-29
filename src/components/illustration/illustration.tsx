@@ -1,3 +1,5 @@
+import './illustration.scss';
+
 import classNames from 'classnames';
 
 import type { IllustrationProps } from './illustration.props';

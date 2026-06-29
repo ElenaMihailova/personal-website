@@ -9,7 +9,7 @@ import Icon from '@/components/icon';
 import Nav from '@/components/nav/nav';
 import SocialLinks from '@/components/social-links';
 import { data } from '@/data/data';
-import { useActiveSection, useDismiss } from '@/hooks';
+import { useActiveSection, useDismiss, useIsScrolling } from '@/hooks';
 
 const SECTION_IDS = data.links.map((link) => link.id);
 
@@ -19,16 +19,17 @@ function Header() {
 
   const handleClose = useCallback(() => setIsOpen(false), []);
   const activeId = useActiveSection(SECTION_IDS);
+  const isScrolling = useIsScrolling();
 
   useDismiss(headerRef, isOpen, handleClose);
 
   return (
-    <header className={classNames('header', { header_open: isOpen })} ref={headerRef}>
-      <div className="header__bar">
-        <Burger controls="primary-nav" isOpen={isOpen} onToggle={() => setIsOpen(!isOpen)} />
-        <Icon alt="Logo" className="header__logo" src={LogoIcon} />
-        <SocialLinks className="header__social-links" socials={data.socials} />
-      </div>
+    <header
+      className={classNames('header', { header_open: isOpen, header_scrolling: isScrolling })}
+      ref={headerRef}
+    >
+      <Burger controls="primary-nav" isOpen={isOpen} onToggle={() => setIsOpen(!isOpen)} />
+      <Icon alt="Logo" className="header__logo" src={LogoIcon} />
       <Nav
         activeId={activeId}
         className="header__nav"
@@ -36,6 +37,7 @@ function Header() {
         links={data.links}
         onLinkClick={() => setIsOpen(false)}
       />
+      <SocialLinks className="header__social-links" socials={data.socials} />
     </header>
   );
 }
