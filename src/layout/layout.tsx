@@ -5,7 +5,7 @@ import Header from './header';
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="layout">
+    <div className="layout" id="top">
       <Header />
       {children}
       <Footer />

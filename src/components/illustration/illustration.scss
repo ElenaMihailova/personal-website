@@ -1,5 +1,12 @@
+@use 'breakpoints' as *;
+
 .illustration {
   height: 328px;
   margin: 0 auto;
   width: 328px;
+
+  @include desktop {
+    height: 432px;
+    width: 432px;
+  }
 }

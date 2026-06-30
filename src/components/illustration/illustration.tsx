@@ -4,9 +4,9 @@ import classNames from 'classnames';
 
 import type { IllustrationProps } from './illustration.props';
 
-function Illustration({ alt = '', className, src }: IllustrationProps) {
+function Illustration({ alt = '', className, loading = 'lazy', src }: IllustrationProps) {
   return (
-    <img alt={alt} className={classNames('illustration', className)} loading="lazy" src={src} />
+    <img alt={alt} className={classNames('illustration', className)} loading={loading} src={src} />
   );
 }
 

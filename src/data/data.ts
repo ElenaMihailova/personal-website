@@ -99,13 +99,13 @@ export const data: SiteData = {
     title: 'Skills',
   },
   socials: [
-    { href: 'https://github.com/ElenaMihailova', label: 'ElenaMihailova', type: 'github' },
-    { href: 'https://t.me/Elena_Mihailova_dev', label: 'Elena_Mihailova_dev', type: 'telegram' },
+    { href: 'https://github.com/ElenaMikhailova', label: 'ElenaMikhailova', type: 'github' },
+    { href: 'https://t.me/Elena_Mikhailova_dev', label: 'Elena_Mikhailova_dev', type: 'telegram' },
     {
       href: 'https://www.linkedin.com/in/elena-mikhailova-dev',
       label: 'elena-mikhailova-dev',
       type: 'linkedin',
     },
-    { href: 'mailto:mihailova.dev@gmail.com', label: 'mihailova.dev@gmail.com', type: 'email' },
+    { href: 'mailto:Mikhailova.dev@gmail.com', label: 'Mikhailova.dev@gmail.com', type: 'email' },
   ],
 };

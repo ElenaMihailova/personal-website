@@ -10,7 +10,7 @@ import type { HeroProps } from './hero.props';
 function Hero({ hero }: HeroProps) {
   return (
     <Section className="hero" id={SectionId.HERO}>
-      <Illustration alt="" className="hero__illustration" src={heroIllustration} />
+      <Illustration alt="" className="hero__illustration" loading="eager" src={heroIllustration} />
       <div className="hero__text">
         <h1 className="hero__greeting">
           {hero.greeting} <span className="hero__name">{hero.name}</span>
