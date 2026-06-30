@@ -7,5 +7,7 @@ interface TabItem {
 }
 
 export interface TabsProps {
+  activeId: string;
   items: TabItem[];
+  onChange: (id: string) => void;
 }

@@ -1,6 +1,7 @@
 export const SectionId = {
-  HERO: 'hero',
   ABOUT: 'about',
+  HERO: 'hero',
+  EXPERIENCE: 'experience',
   SKILLS: 'skills',
   CONTACTS: 'contacts',
 } as const;

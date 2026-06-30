@@ -1,16 +1,13 @@
 import './tabs.scss';
 
 import classNames from 'classnames';
-import { useState } from 'react';
 
 import type { TabsProps } from './tabs.props';
 
-function Tabs({ items }: TabsProps) {
-  const [activeId, setActiveId] = useState(items[0].id);
-
+function Tabs({ activeId, items, onChange }: TabsProps) {
   return (
     <div className="tabs">
-      <ul className="tabs__list">
+      <div className="tabs__list" role="tablist">
         {items.map((item) => (
           <button
             key={item.id}
@@ -18,23 +15,29 @@ function Tabs({ items }: TabsProps) {
             aria-selected={item.id === activeId}
             role="tab"
             type="button"
-            onClick={() => setActiveId(item.id)}
+            onClick={() => onChange(item.id)}
           >
             {item.label}
           </button>
         ))}
-      </ul>
+      </div>
       <div className="tabs__panels">
-        {items.map((item) => (
-          <div
-            key={item.id}
-            className="tabs__panel"
-            role="tabpanel"
-            aria-hidden={item.id !== activeId}
-          >
-            {item.content}
-          </div>
-        ))}
+        {items.map((item) => {
+          const isActive = item.id === activeId;
+          return (
+            <div
+              key={item.id}
+              className={classNames('tabs__panel', {
+                tabs__panel_active: isActive,
+                'motion-slide-in': isActive,
+              })}
+              aria-hidden={!isActive}
+              role="tabpanel"
+            >
+              {item.content}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

@@ -42,9 +42,23 @@ export interface ContactData {
   title: string;
 }
 
+export interface ExperienceItem {
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+  meta?: string;
+}
+
+export interface ExperienceData {
+  items: ExperienceItem[];
+  title: string;
+}
+
 export interface SiteData {
   about: AboutData;
   contacts: ContactData;
+  experience: ExperienceData;
   hero: HeroData;
   links: NavLink[];
   skills: SkillsData;

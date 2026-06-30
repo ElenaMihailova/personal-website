@@ -7,6 +7,7 @@ import githubIcon from '@/assets/icons/github.svg?react';
 import linkedinIcon from '@/assets/icons/in.svg?react';
 import emailIcon from '@/assets/icons/mail.svg?react';
 import TelegramIcon from '@/assets/icons/tm.svg?react';
+import { SOCIAL_LABEL } from '@/data/data';
 import type { SocialType } from '@/data/type';
 
 import type { SocialLinksProps } from './social-links-props';
@@ -27,12 +28,13 @@ function SocialLinks({ className, showLabel, socials }: SocialLinksProps) {
           return (
             <li className="social-links__item" key={social.type}>
               <a
+                aria-label={`${SOCIAL_LABEL[social.type]}: ${social.label}`}
                 className="social-links__link"
                 href={social.href}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <IconComponent className="social-links__icon" />
+                <IconComponent className="social-links__icon" focusable="false" />
                 {showLabel && <p className="social-links__label">{social.label}</p>}
               </a>
             </li>

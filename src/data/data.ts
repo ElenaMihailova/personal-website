@@ -1,5 +1,12 @@
 import { SectionId } from './section-id';
-import type { SiteData } from './type';
+import type { SiteData, SocialType } from './type';
+
+export const SOCIAL_LABEL: Record<SocialType, string> = {
+  email: 'Email',
+  github: 'GitHub',
+  linkedin: 'LinkedIn',
+  telegram: 'Telegram',
+};
 
 export const data: SiteData = {
   about: {
@@ -32,34 +39,54 @@ export const data: SiteData = {
     subtitle: 'I will be glad to meet you!',
     title: "We'll be in touch",
   },
+  experience: {
+    title: 'Experience',
+    items: [
+      {
+        role: 'Frontend Developer',
+        company: 'All Funeral Services',
+        period: '12/2024 – 07/2026',
+        description:
+          'Payment & checkout in a money-critical product — Stripe/Klarna subscriptions, one-time and promo pricing — on a config-driven SSO/checkout architecture.',
+      },
+      {
+        role: 'AI Product Engineer',
+        company: 'HeroContent.ai',
+        period: '12/2025 – present',
+        meta: 'part-time',
+        description:
+          'AI content pipeline: automated Vision-QA review, read-only audit agent with actionable alerts, and decline-reason analytics feeding back into generation.',
+      },
+      {
+        role: 'Frontend Developer',
+        company: 'Earlier projects',
+        period: '2022 – 2024',
+        description:
+          'Web & React Native across e-commerce, booking and startup products: Missis Laser, FullV, WebImpulse, Raketa.',
+      },
+    ],
+  },
   hero: {
     greeting: 'My name is',
     name: 'Elena!',
     role: "I'm Frontend Developer",
   },
   links: [
-    { id: SectionId.HERO, label: 'Start' },
     { id: SectionId.ABOUT, label: 'About me' },
+    { id: SectionId.EXPERIENCE, label: 'Experience' },
     { id: SectionId.SKILLS, label: 'Skills' },
     { id: SectionId.CONTACTS, label: 'Contacts' },
   ],
   skills: {
     hard: [
-      'React — hooks, context, modern patterns',
-      'TypeScript',
-      'Next.js (SSR/SSG, routing)',
-      'State management: Redux Toolkit, MobX',
-      'REST API integration',
-      'Payment integrations (Stripe, Klarna)',
-      'Config-driven UI architecture',
-      'Responsive, cross-browser, accessible layout (SCSS, Tailwind)',
-      'Figma → code (design handoff)',
-      'i18n / localization',
-      'Performance optimization (Core Web Vitals, loading speed)',
-      'Unit, component & E2E testing (Jest, React Testing Library, Playwright)',
-      'Storybook / component-driven development',
-      'Git, CI/CD & build tooling (Vite, Webpack, npm-scripts)',
-      'Building production features with AI coding agents',
+      'React & TypeScript — hooks, context, modern frontend patterns',
+      'Next.js — SSR/SSG, routing, production application structure',
+      'State & data flow — Redux Toolkit, MobX, REST API integration',
+      'Payments & checkout — Stripe, Klarna, subscriptions, promo pricing',
+      'Responsive, accessible UI — SCSS, Tailwind, Figma-to-code, i18n',
+      'Performance & quality — Core Web Vitals, loading speed, production UX',
+      'Testing — Jest, React Testing Library, Playwright, unit/component/E2E coverage',
+      'Tooling & delivery — Storybook, Git, CI/CD, Vite, Webpack, npm scripts, AI coding agents',
     ],
     soft: [
       'Strong on payment & money logic (15 years in finance)',

@@ -1,17 +1,16 @@
 @use 'breakpoints' as *;
 
 .section {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 25px;
   padding: 25px 16px;
 
   @include tablet {
-    flex-direction: row;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     padding: 25px 56px;
 
-    &:nth-child(even) {
-      flex-direction: row-reverse;
+    &:nth-child(even) > :first-child {
+      order: 2;
     }
   }
 }

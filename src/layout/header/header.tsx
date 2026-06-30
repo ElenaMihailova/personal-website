@@ -25,7 +25,9 @@ function Header() {
   return (
     <header className={classNames('header', { header_open: isOpen })} ref={headerRef}>
       <Burger controls="primary-nav" isOpen={isOpen} onToggle={() => setIsOpen(!isOpen)} />
-      <Icon alt="Logo" className="header__logo" src={LogoIcon} />
+      <a className="header__logo-link" href="#top" aria-label="Back to top">
+        <Icon alt="Logo" className="header__logo" src={LogoIcon} />
+      </a>
       <Nav
         activeId={activeId}
         className="header__nav"
