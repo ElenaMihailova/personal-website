@@ -35,6 +35,8 @@ npm run dev      # start dev server
 npm run build    # production build
 npm run preview  # preview the production build locally
 
+```
+
 ## Quality checks
 
 ```bash
