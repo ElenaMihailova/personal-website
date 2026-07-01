@@ -6,7 +6,7 @@ import { useCallback, useRef, useState } from 'react';
 import LogoIcon from '@/assets/icons/logo.svg';
 import Burger from '@/components/burger';
 import Icon from '@/components/icon';
-import Nav from '@/components/nav/nav';
+import Nav from '@/components/nav';
 import SocialLinks from '@/components/social-links';
 import { data } from '@/data/data';
 import { useActiveSection, useDismiss } from '@/hooks';
@@ -26,7 +26,7 @@ function Header() {
     <header className={classNames('header', { header_open: isOpen })} ref={headerRef}>
       <Burger controls="primary-nav" isOpen={isOpen} onToggle={() => setIsOpen(!isOpen)} />
       <a className="header__logo-link" href="#top" aria-label="Back to top">
-        <Icon alt="Logo" className="header__logo" src={LogoIcon} />
+        <Icon alt="" className="header__logo" src={LogoIcon} />
       </a>
       <Nav
         activeId={activeId}

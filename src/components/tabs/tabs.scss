@@ -30,11 +30,6 @@
   color: var(--color-accent);
 }
 
-.tabs__button_active {
-  background-color: var(--color-accent);
-  color: var(--color-paper);
-}
-
 .tabs__list {
   display: flex;
   flex-wrap: wrap;

@@ -36,6 +36,7 @@ export const data: SiteData = {
     ],
   },
   contacts: {
+    resumeLabel: 'Download CV as PDF',
     subtitle: 'I will be glad to meet you!',
     title: "We'll be in touch",
   },
@@ -69,6 +70,10 @@ export const data: SiteData = {
   hero: {
     greeting: 'My name is',
     name: 'Elena!',
+    resume: {
+      href: '/elena-mihailova-cv.pdf',
+      label: 'Download CV',
+    },
     role: "I'm Frontend Developer",
   },
   links: [
@@ -99,7 +104,7 @@ export const data: SiteData = {
     title: 'Skills',
   },
   socials: [
-    { href: 'https://github.com/ElenaMikhailova', label: 'ElenaMikhailova', type: 'github' },
+    { href: 'https://github.com/ElenaMihailova', label: 'ElenaMikhailova', type: 'github' },
     { href: 'https://t.me/Elena_Mikhailova_dev', label: 'Elena_Mikhailova_dev', type: 'telegram' },
     {
       href: 'https://www.linkedin.com/in/elena-mikhailova-dev',

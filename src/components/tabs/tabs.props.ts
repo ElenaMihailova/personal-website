@@ -8,6 +8,7 @@ interface TabItem {
 
 export interface TabsProps {
   activeId: string;
+  idPrefix: string;
   items: TabItem[];
   onChange: (id: string) => void;
 }

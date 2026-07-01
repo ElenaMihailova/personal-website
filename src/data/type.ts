@@ -16,7 +16,13 @@ export interface NavLink {
 export interface HeroData {
   greeting: string;
   name: string;
+  resume: ResumeData;
   role: string;
+}
+
+export interface ResumeData {
+  href: string;
+  label: string;
 }
 
 export interface EducationItem {
@@ -38,6 +44,7 @@ export interface SkillsData {
 }
 
 export interface ContactData {
+  resumeLabel: string;
   subtitle: string;
   title: string;
 }

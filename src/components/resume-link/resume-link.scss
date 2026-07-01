@@ -1,0 +1,82 @@
+@use 'mixins' as *;
+
+.resume-link {
+  @include interactive-shift;
+
+  align-items: center;
+  display: inline-flex;
+  width: fit-content;
+}
+
+.resume-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.resume-link__icon {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+}
+
+.resume-link__symbol {
+  height: 18px;
+  width: 18px;
+}
+
+.resume-link_primary {
+  @include transition(background-color, color, outline-color, transform);
+
+  background-color: var(--color-accent);
+  color: var(--color-paper);
+  font-size: 16px;
+  font-weight: 700;
+  gap: 10px;
+  justify-content: center;
+  letter-spacing: 1.2px;
+  line-height: 18px;
+  padding: 12px 16px;
+}
+
+.resume-link_primary:hover,
+.resume-link_primary:focus-visible,
+.resume-link_primary:active {
+  background-color: var(--color-text);
+  color: var(--color-paper);
+}
+
+.resume-link_contact {
+  @include transition(color, outline-color, transform);
+
+  color: var(--color-accent);
+  font-weight: 500;
+  gap: 16px;
+}
+
+.resume-link_contact:hover,
+.resume-link_contact:focus-visible,
+.resume-link_contact:active {
+  color: var(--color-text);
+}
+
+.resume-link_contact .resume-link__icon {
+  @include transition(background-color);
+
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  color: var(--color-paper);
+  flex-basis: 32px;
+  height: 32px;
+  width: 32px;
+}
+
+.resume-link_contact:hover .resume-link__icon,
+.resume-link_contact:focus-visible .resume-link__icon,
+.resume-link_contact:active .resume-link__icon {
+  background-color: var(--color-text);
+}
+
+.resume-link_contact .resume-link__label {
+  font-size: 18px;
+}

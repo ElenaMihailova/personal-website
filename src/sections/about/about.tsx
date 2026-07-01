@@ -40,13 +40,13 @@ function About({ about }: AboutProps) {
     <Section className="about" id={SectionId.ABOUT}>
       <Illustration
         alt=""
-        className="about__illustration motion-slide-in"
+        className="about__illustration motion-tab-illustration"
         key={activeTabId}
         src={activeTab.illustration}
       />
       <div className="about__content">
         <Title className="about__title">{about.title}</Title>
-        <Tabs activeId={activeTabId} items={tabs} onChange={setActiveTabId} />
+        <Tabs activeId={activeTabId} idPrefix="about" items={tabs} onChange={setActiveTabId} />
       </div>
     </Section>
   );

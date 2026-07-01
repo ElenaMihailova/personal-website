@@ -16,6 +16,22 @@ $transition-timing: ease;
   transition-timing-function: $transition-timing;
 }
 
+@mixin interactive-shift($distance: 2px) {
+  &:hover,
+  &:focus-visible,
+  &:active {
+    transform: translateX($distance);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &:hover,
+    &:focus-visible,
+    &:active {
+      transform: none;
+    }
+  }
+}
+
 @mixin title {
   font-family: var(--font-display);
   font-size: 52px;

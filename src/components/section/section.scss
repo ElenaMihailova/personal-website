@@ -14,3 +14,24 @@
     }
   }
 }
+
+.section_reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition-duration: 420ms;
+  transition-property: opacity, transform;
+  transition-timing-function: ease;
+}
+
+.section_visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section_reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

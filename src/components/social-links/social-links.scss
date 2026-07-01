@@ -1,4 +1,5 @@
 @use 'breakpoints' as *;
+@use 'mixins' as *;
 
 .social-links__list {
   display: flex;
@@ -11,12 +12,29 @@
 }
 
 .social-links__icon {
+  @include transition(color);
+
   color: var(--color-social);
   height: 28px;
   width: 28px;
 }
 
+.social-links__link:hover .social-links__icon,
+.social-links__link:focus-visible .social-links__icon,
+.social-links__link:active .social-links__icon {
+  color: var(--color-accent);
+}
+
+.social-links__link:focus-visible {
+  border-radius: 4px;
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
 .social-links__link {
+  @include interactive-shift;
+  @include transition(transform);
+
   align-items: center;
   display: flex;
   flex-wrap: wrap;

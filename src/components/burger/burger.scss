@@ -1,5 +1,5 @@
-@use 'mixins' as *;
 @use 'breakpoints' as *;
+@use 'mixins' as *;
 
 .burger {
   @include reset-button;

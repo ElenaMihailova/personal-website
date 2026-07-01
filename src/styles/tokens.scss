@@ -10,7 +10,7 @@
   --color-accent: var(--color-signal);
   --color-accent-soft: #e8e9ff;
   --color-surface: var(--color-gray);
-  --color-social: var(--color-sky);
+  --color-social: var(--color-muted);
   --color-nav-link: var(--color-gray);
   --color-muted: var(--color-mute);
   --font-display: 'Space Grotesk', sans-serif;
@@ -26,5 +26,6 @@
 
   /* misc */
   --line-height-body: 1.6;
+  --letter-spacing-base: 0;
   --letter-spacing-label: 0.08em;
 }

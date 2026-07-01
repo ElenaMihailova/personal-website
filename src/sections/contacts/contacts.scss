@@ -16,6 +16,12 @@
   text-align: start;
 }
 
+.contacts__links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .contacts__list {
   .social-links__list {
     display: flex;
@@ -26,5 +32,14 @@
     color: var(--color-accent);
     height: 32px;
     width: 32px;
+  }
+
+  .social-links__link:hover .social-links__icon,
+  .social-links__link:hover .social-links__label,
+  .social-links__link:focus-visible .social-links__icon,
+  .social-links__link:focus-visible .social-links__label,
+  .social-links__link:active .social-links__icon,
+  .social-links__link:active .social-links__label {
+    color: var(--color-text);
   }
 }

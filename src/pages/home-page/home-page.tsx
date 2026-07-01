@@ -1,10 +1,10 @@
 import './home-page.scss';
 
 import { data } from '@/data/data';
-import About from '@/sections/about/about';
+import About from '@/sections/about';
 import Contacts from '@/sections/contacts';
 import Experience from '@/sections/experience';
-import Hero from '@/sections/hero/hero';
+import Hero from '@/sections/hero';
 import Skills from '@/sections/skills';
 
 function HomePage() {
@@ -14,7 +14,7 @@ function HomePage() {
       <About about={data.about} />
       <Experience experience={data.experience} />
       <Skills skills={data.skills} />
-      <Contacts contacts={data.contacts} socials={data.socials} />
+      <Contacts contacts={data.contacts} resume={data.hero.resume} socials={data.socials} />
     </main>
   );
 }

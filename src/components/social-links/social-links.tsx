@@ -3,19 +3,19 @@ import './social-links.scss';
 import classNames from 'classnames';
 import type { ComponentType, SVGProps } from 'react';
 
-import githubIcon from '@/assets/icons/github.svg?react';
-import linkedinIcon from '@/assets/icons/in.svg?react';
-import emailIcon from '@/assets/icons/mail.svg?react';
+import GithubIcon from '@/assets/icons/github.svg?react';
+import LinkedinIcon from '@/assets/icons/in.svg?react';
+import EmailIcon from '@/assets/icons/mail.svg?react';
 import TelegramIcon from '@/assets/icons/tm.svg?react';
 import { SOCIAL_LABEL } from '@/data/data';
 import type { SocialType } from '@/data/type';
 
-import type { SocialLinksProps } from './social-links-props';
+import type { SocialLinksProps } from './social-links.props';
 
 const SocialIcon: Record<SocialType, ComponentType<SVGProps<SVGSVGElement>>> = {
-  email: emailIcon,
-  github: githubIcon,
-  linkedin: linkedinIcon,
+  email: EmailIcon,
+  github: GithubIcon,
+  linkedin: LinkedinIcon,
   telegram: TelegramIcon,
 };
 
@@ -35,7 +35,7 @@ function SocialLinks({ className, showLabel, socials }: SocialLinksProps) {
                 target="_blank"
               >
                 <IconComponent className="social-links__icon" focusable="false" />
-                {showLabel && <p className="social-links__label">{social.label}</p>}
+                {showLabel && <span className="social-links__label">{social.label}</span>}
               </a>
             </li>
           );

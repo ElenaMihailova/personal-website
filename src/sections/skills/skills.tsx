@@ -34,13 +34,13 @@ function Skills({ skills }: SkillsProps) {
     <Section className="skills" id={SectionId.SKILLS}>
       <Illustration
         alt=""
-        className="skills__illustration motion-slide-in"
+        className="skills__illustration motion-tab-illustration"
         key={activeTabId}
         src={activeTab.illustration}
       />
       <div className="skills__content">
         <Title className="skills__title">{skills.title}</Title>
-        <Tabs activeId={activeTabId} items={tabs} onChange={setActiveTabId} />
+        <Tabs activeId={activeTabId} idPrefix="skills" items={tabs} onChange={setActiveTabId} />
       </div>
     </Section>
   );

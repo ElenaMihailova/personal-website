@@ -1,11 +1,30 @@
 .motion-slide-in {
-  animation: slide-in 240ms ease both;
+  animation: slide-in 260ms ease both 60ms;
+}
+
+.motion-gentle-flow {
+  animation: gentle-flow 6400ms ease-in-out infinite;
+}
+
+.motion-tab-illustration {
+  animation: tab-illustration-in 300ms ease both 80ms;
+}
+
+@keyframes gentle-flow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 @keyframes slide-in {
   from {
     opacity: 0;
-    transform: translateX(18px);
+    transform: translateX(16px);
   }
 
   to {
@@ -14,8 +33,22 @@
   }
 }
 
+@keyframes tab-illustration-in {
+  from {
+    opacity: 0;
+    transform: translateX(18px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .motion-slide-in {
+  .motion-slide-in,
+  .motion-gentle-flow,
+  .motion-tab-illustration {
     animation: none;
   }
 }

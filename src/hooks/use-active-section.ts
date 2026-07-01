@@ -8,6 +8,10 @@ export function useActiveSection(ids: SectionId[]): SectionId {
   const [activeId, setActiveId] = useState<SectionId>(ids[0]);
 
   useEffect(() => {
+    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+      return;
+    }
+
     const sections = ids
       .map((id) => document.getElementById(id))
       .filter((section) => section !== null);
