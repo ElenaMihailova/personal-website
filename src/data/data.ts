@@ -111,6 +111,6 @@ export const data: SiteData = {
       label: 'elena-mikhailova-dev',
       type: 'linkedin',
     },
-    { href: 'mailto:Mikhailova.dev@gmail.com', label: 'Mikhailova.dev@gmail.com', type: 'email' },
+    { href: 'mailto:mihailova.dev@gmail.com', label: 'Mikhailova.dev@gmail.com', type: 'email' },
   ],
 };
