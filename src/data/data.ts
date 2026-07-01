@@ -38,7 +38,7 @@ export const data: SiteData = {
   contacts: {
     resumeLabel: 'Download CV as PDF',
     subtitle: 'I will be glad to meet you!',
-    title: "We'll be in touch",
+    title: 'Let’s keep in touch',
   },
   experience: {
     title: 'Experience',
@@ -74,7 +74,7 @@ export const data: SiteData = {
       href: '/elena-mihailova-cv.pdf',
       label: 'Download CV',
     },
-    role: "I'm Frontend Developer",
+    role: "I'm a Frontend Developer",
   },
   links: [
     { id: SectionId.ABOUT, label: 'About me' },
