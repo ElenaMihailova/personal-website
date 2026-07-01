@@ -1,6 +1,6 @@
-# Personal Website — Elena Mihailova
+# Personal Website — Elena Mikhailova
 
-Single-page personal website (business card) of Elena Mihailova, Frontend Developer.
+Single-page personal website (business card) of Elena Mikhailova, Frontend Developer.
 
 🔗 **Live:** <https://personal-website-flame-one.vercel.app/>
 
