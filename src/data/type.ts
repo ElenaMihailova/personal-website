@@ -86,7 +86,7 @@ export interface ContactData {
 
 export interface ExperienceItem {
   company: string;
-  description: string;
+  description?: string;
   meta?: string;
   period: string;
   role: string;

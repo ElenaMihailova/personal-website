@@ -14,7 +14,7 @@ export const data: SiteData = {
     description: [
       'Before tech, I spent 15 years as a chief accountant, so payment logic is second nature to me — edge cases included.',
       'Day to day, I work with React, TypeScript and Next.js, favoring config-driven architecture and writing tests first. I use AI coding agents to move faster, but I make the design calls and review every change.',
-      'Outside work, I’m a long-distance runner and do CrossFit. Both reward what good engineering does: steady, consistent effort.',
+      'Outside work, I’m a long-distance runner and do CrossFit.',
     ],
     principlesTitle: 'How I work',
     principles: [
@@ -60,19 +60,16 @@ export const data: SiteData = {
         company: 'HeroContent.ai',
         meta: 'part-time',
         period: 'Dec 2025 – present',
-        description: 'Built automated quality control for an AI content pipeline.',
       },
       {
         role: 'Frontend Developer',
         company: 'All Funeral Services',
         period: 'Dec 2024 – Jul 2026',
-        description: 'Shipped payments, sign-in and real-time features across four products.',
       },
       {
         role: 'Frontend Developer',
         company: 'Missis Laser',
         period: 'May 2024 – Nov 2024',
-        description: 'Delivered booking, partner and e-contract apps for the web and React Native.',
       },
       {
         role: 'Frontend Developer',
@@ -95,7 +92,7 @@ export const data: SiteData = {
     secondaryAction: { href: `#${SectionId.CONTACTS}`, label: 'Get in touch' },
   },
   resume: {
-    href: '/elena-mihailova-cv.pdf',
+    href: '/elena-mikhailova-cv.pdf',
     label: 'Download CV (PDF)',
   },
   links: [
@@ -153,7 +150,7 @@ export const data: SiteData = {
   },
   skills: {
     title: 'Skills',
-    intro: 'Grouped by what I deliver, not by what I’ve installed.',
+    intro: 'Grouped by what I deliver.',
     groups: [
       {
         title: 'AI product engineering',

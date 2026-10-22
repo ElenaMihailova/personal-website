@@ -20,7 +20,7 @@ function Experience({ experience }: ExperienceProps) {
                 {item.company}
                 {item.meta && ` · ${item.meta}`}
               </p>
-              <p className="experience__description">{item.description}</p>
+              {item.description && <p className="experience__description">{item.description}</p>}
             </div>
           </li>
         ))}
