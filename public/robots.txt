@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://personal-website-flame-one.vercel.app/sitemap.xml
+Sitemap: https://elena-mikhailova.vercel.app/sitemap.xml

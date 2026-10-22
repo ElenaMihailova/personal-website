@@ -2,7 +2,7 @@
 
 Personal portfolio site: selected work, experience, skills and contacts on a single page.
 
-**Live:** <https://personal-website-flame-one.vercel.app/>
+**Live:** <https://elena-mikhailova.vercel.app/>
 
 ![Site preview](public/og-image.png)
 
