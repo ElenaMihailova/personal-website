@@ -1,19 +1,19 @@
+import { fileURLToPath } from 'node:url';
+
 import react from '@vitejs/plugin-react';
-import path from 'path';
 import { defineConfig } from 'vite';
 import svgr from 'vite-plugin-svgr';
 
+const fromRoot = (path: string) => fileURLToPath(new URL(path, import.meta.url));
+
 export default defineConfig({
   plugins: [react(), svgr()],
-  resolve: { alias: { '@': path.resolve(__dirname, './src') } },
+  resolve: { alias: { '@': fromRoot('./src') } },
   css: {
     preprocessorOptions: {
       scss: {
-        loadPaths: ['src/styles'],
+        loadPaths: [fromRoot('./src/styles')],
       },
     },
-  },
-  server: {
-    allowedHosts: ['madalynn-unbatterable-permissively.ngrok-free.dev'],
   },
 });

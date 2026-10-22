@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:styles": "stylelint \"src/**/*.{css,scss}\"",
-    "check": "prettier --check . && eslint . && stylelint \"src/**/*.{css,scss}\"",
+    "typecheck": "tsc -b",
+    "check": "prettier --check . && npm run typecheck && npm run lint && npm run lint:styles",
     "fix": "prettier --write . && eslint . --fix && stylelint \"src/**/*.{css,scss}\" --fix"
   },
   "dependencies": {
