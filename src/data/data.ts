@@ -86,7 +86,7 @@ export const data: SiteData = {
     name: 'Elena Mikhailova',
     role: 'Frontend & AI Product Engineer',
     status: 'Based in Novi Sad, Serbia · Open to remote work and relocation',
-    title: 'I build interfaces people trust with money and decisions.',
+    title: 'I build interfaces people trust with their money.',
     lead: 'Checkout and subscription flows in React and TypeScript. AI content pipelines with automated quality control. And an accountant’s eye for the numbers.',
     primaryAction: { href: `#${SectionId.WORK}`, label: 'See selected work' },
     secondaryAction: { href: `#${SectionId.CONTACTS}`, label: 'Get in touch' },
