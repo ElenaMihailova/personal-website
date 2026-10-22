@@ -17,7 +17,7 @@ function WorkCard({ item }: WorkCardProps) {
           <li key={contribution}>{contribution}</li>
         ))}
       </ul>
-      <ul className="work-card__tags" aria-label="Stack" role="list">
+      <ul className="work-card__tags" aria-label="Tech stack" role="list">
         {item.tags.map((tag) => (
           <li className="work-card__tag" key={tag}>
             {tag}

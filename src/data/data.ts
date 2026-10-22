@@ -12,9 +12,9 @@ export const data: SiteData = {
   about: {
     title: 'About me',
     description: [
-      'Before tech, I spent 15 years as a chief accountant. So payment logic is home ground for me: I know how it works from the inside, edge cases included.',
-      'Day to day I work in React, TypeScript and Next.js, with config-driven architecture and tests first. I use AI coding agents to move faster, but I make the design calls and review every change.',
-      'Outside work, I run long distances and do CrossFit. Both take the same steadiness as shipping code.',
+      'Before tech, I spent 15 years as a chief accountant, so payment logic is second nature to me — edge cases included.',
+      'Day to day, I work with React, TypeScript and Next.js, favoring config-driven architecture and writing tests first. I use AI coding agents to move faster, but I make the design calls and review every change.',
+      'Outside work, I’m a long-distance runner and do CrossFit. Both reward what good engineering does: steady, consistent effort.',
     ],
     principlesTitle: 'How I work',
     principles: [
@@ -66,13 +66,13 @@ export const data: SiteData = {
         role: 'Frontend Developer',
         company: 'All Funeral Services',
         period: 'Dec 2024 – Jul 2026',
-        description: 'Built payments, sign-in and real-time features across four products.',
+        description: 'Shipped payments, sign-in and real-time features across four products.',
       },
       {
         role: 'Frontend Developer',
         company: 'Missis Laser',
         period: 'May 2024 – Nov 2024',
-        description: 'Built booking, partner and e-contract apps for web and React Native.',
+        description: 'Delivered booking, partner and e-contract apps for the web and React Native.',
       },
       {
         role: 'Frontend Developer',
@@ -80,7 +80,7 @@ export const data: SiteData = {
         meta: 'contract',
         period: 'Mar 2022 – Dec 2023',
         description:
-          'Built React Native and responsive web interfaces for three clients, including a Boston startup.',
+          'Built React Native and responsive web interfaces for three clients, including a Boston-based startup.',
       },
     ],
   },
@@ -88,9 +88,9 @@ export const data: SiteData = {
     bubble: 'Shipped!',
     name: 'Elena Mikhailova',
     role: 'Frontend & AI Product Engineer',
-    status: 'Based in Novi Sad, Serbia · Open to remote and relocation',
+    status: 'Based in Novi Sad, Serbia · Open to remote work and relocation',
     title: 'I build interfaces people trust with money and decisions.',
-    lead: 'Checkout and subscription flows in React and TypeScript. AI content pipelines with automated quality control. And an accountant’s eye for every number.',
+    lead: 'Checkout and subscription flows in React and TypeScript. AI content pipelines with automated quality control. And an accountant’s eye for the numbers.',
     primaryAction: { href: `#${SectionId.WORK}`, label: 'See selected work' },
     secondaryAction: { href: `#${SectionId.CONTACTS}`, label: 'Get in touch' },
   },
@@ -117,7 +117,7 @@ export const data: SiteData = {
           'A social media platform for restaurants generates posts with AI. Manual visual review was rejecting about 40% of the content.',
         contributions: [
           'Automated Vision QA audit with issue-specific gates to cut false positives',
-          'Read-only, tool-using agent that flags plan, calendar and approval gaps in Telegram',
+          'Read-only, tool-using agent that audits plans, calendars and approvals and posts alerts to Telegram',
           'Rejection-reason analytics feeding back into prompts and templates',
         ],
         result: 'Manual image review down to zero.',
@@ -128,20 +128,20 @@ export const data: SiteData = {
         company: 'All Funeral Services',
         period: 'Dec 2024 – Jul 2026',
         summary:
-          'An internal operations system, a white-label memorial site, a subscription and payments product and a configurable sign-in service.',
+          'Four products: an internal operations system, a white-label memorial site, a subscriptions and payments app and a configurable sign-in service.',
         contributions: [
           'Stripe and Klarna checkout: subscriptions, one-time payments and promo pricing',
           'Runtime config for SSO sign-in methods and a config-driven checkout flow',
-          'Real-time chat, Firebase auth with four providers and English/Hebrew RTL',
+          'Real-time chat, four-provider Firebase auth and Hebrew (RTL) localization',
         ],
         tags: ['React', 'TypeScript', 'Stripe', 'Klarna', 'Firebase', 'Playwright'],
       },
       {
-        title: 'Web and mobile apps for a 6-clinic chain',
+        title: 'Web and mobile apps for a six-clinic chain',
         company: 'Missis Laser',
         period: 'May 2024 – Nov 2024',
         summary:
-          'A chain of six clinics moved bookings, partners and contracts online — on the web and on mobile.',
+          'Digital tools for a chain of six clinics: bookings, partners and contracts, on the web and on mobile.',
         contributions: [
           'Partner program and e-contract web apps',
           'Online booking on the web and in a React Native mobile app',
@@ -186,7 +186,7 @@ export const data: SiteData = {
       {
         title: 'Payments, auth & real-time',
         description:
-          'Checkout, subscriptions and promo pricing, sign-in and live chat across four products — with 15 years of accounting behind every edge case.',
+          'Checkout, subscriptions and promo pricing, sign-in and live chat across four products — backed by 15 years in accounting.',
         tools: [
           'Stripe subscriptions & checkout',
           'Klarna',
