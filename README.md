@@ -1,45 +1,51 @@
-# Personal Website — Elena Mikhailova
+# Elena Mikhailova — Frontend & AI Product Engineer
 
-Single-page personal website (business card) of Elena Mikhailova, Frontend Developer.
+Personal portfolio site: selected work, experience, skills and contacts on a single page.
 
-🔗 **Live:** <https://personal-website-flame-one.vercel.app/>
+**Live:** <https://personal-website-flame-one.vercel.app/>
 
-## Tech stack
+![Site preview](public/og-image.png)
 
-- **React 19** + **TypeScript**
-- **Vite**
-- **SCSS** — mobile-first, design tokens, BEM
-- **ESLint / Prettier / Stylelint**
+## Stack
+
+- React 19, TypeScript (strict)
+- Vite
+- SCSS with design tokens and BEM
+- ESLint, Stylelint, Prettier
+- Deployed on Vercel
 
 ## Project structure
 
-- `src/components` — reusable UI components
-- `src/sections` — page sections
-- `src/layout` — page layout, header and footer
-- `src/hooks` — reusable interaction logic
-- `src/data` — navigation, contacts and content data
+```text
+src/
+  components/  reusable UI: action link, burger, education, nav, section, social links, title, work card
+  sections/    page sections: hero, work, experience, skills, about, contacts
+  layout/      page shell: header, footer, skip link
+  data/        site content and its types
+  hooks/       scrollspy and dismiss-on-outside-click / Escape
+  styles/      tokens, base styles, breakpoints and mixins
+  utils/       scroll handling on first load and reload
+```
 
+## How it is built
 
-## Highlights
-
-- Responsive, mobile-first layout (mobile → tablet → desktop)
-- Accessibility-focused: semantic HTML, full keyboard navigation, `:focus-visible`, `aria-current`
-- Scrollspy navigation on native anchor scrolling — no router, no scroll libraries
-- No UI kits: hand-written components and custom hooks (`useActiveSection`, `useDismiss`)
+- **Content as typed data.** All copy lives in `src/data/data.ts` and is typed in `src/data/type.ts`. Sections only render data, so text changes never touch components.
+- **Design system in SCSS.** Colors, type sizes, spacing, control heights and motion come from CSS custom properties in `src/styles/tokens.scss`. Buttons, text links, labels and lists share mixins. Base section styles sit in a cascade layer, so section overrides do not depend on import order.
+- **No UI kit, router or scroll library.** The scrollspy reads section positions on scroll with `requestAnimationFrame`. Sections fade in once via `IntersectionObserver`. Shared links like `/#work` land on their section, and a reload always starts from the top.
+- **Accessibility.** Skip link, one visible focus style, a keyboard-friendly mobile menu that returns focus on Escape, `aria-current` in navigation, WCAG AA contrast, touch targets of at least 40 px and `prefers-reduced-motion` support.
+- **Strict tooling.** TypeScript runs with `strict` and `noUncheckedIndexedAccess`. Stylelint enforces BEM class names and alphabetical properties. ESLint sorts imports.
 
 ## Getting started
 
 ```bash
-npm install      # install dependencies
-npm run dev      # start dev server
-npm run build    # production build
-npm run preview  # preview the production build locally
-
+npm install
+npm run dev
 ```
 
-## Quality checks
-
-```bash
-npm run check
-npm run build
-npm run preview
+| Command             | What it does                                    |
+| ------------------- | ----------------------------------------------- |
+| `npm run dev`       | Start the dev server                            |
+| `npm run build`     | Type-check and build for production             |
+| `npm run preview`   | Serve the production build locally              |
+| `npm run check`     | Prettier, TypeScript, ESLint and Stylelint      |
+| `npm run fix`       | Auto-fix formatting, lint and style issues      |
