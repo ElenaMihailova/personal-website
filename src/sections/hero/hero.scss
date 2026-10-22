@@ -72,13 +72,14 @@
 
 .hero__art {
   container-type: inline-size;
+  display: none;
   justify-self: center;
-  max-width: 280px;
+  max-width: 360px;
   position: relative;
   width: 100%;
 
   @include tablet {
-    max-width: 360px;
+    display: block;
   }
 }
 
