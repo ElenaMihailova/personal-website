@@ -1,8 +1,8 @@
 import './contacts.scss';
 
+import DownloadIcon from '@/assets/icons/download.svg?react';
 import contactIllustration from '@/assets/images/contact.svg';
-import Illustration from '@/components/illustration';
-import ResumeLink from '@/components/resume-link';
+import ActionLink from '@/components/action-link';
 import Section from '@/components/section';
 import SocialLinks from '@/components/social-links';
 import Title from '@/components/title';
@@ -13,18 +13,19 @@ import type { ContactsProps } from './contacts.props';
 function Contacts({ contacts, resume, socials }: ContactsProps) {
   return (
     <Section className="contacts" id={SectionId.CONTACTS}>
-      <Illustration
+      <img
         alt=""
-        className="contacts__illustration motion-gentle-flow"
+        className="contacts__illustration"
+        decoding="async"
+        height={270}
+        loading="lazy"
         src={contactIllustration}
+        width={328}
       />
       <div className="contacts__content">
-        <Title className="contacts__title">{contacts.title}</Title>
-        <p className="contacts__description">{contacts.subtitle}</p>
-        <div className="contacts__links">
-          <SocialLinks className="contacts__list" showLabel socials={socials} />
-          <ResumeLink label={contacts.resumeLabel} resume={resume} variant="contact" />
-        </div>
+        <Title intro={contacts.subtitle}>{contacts.title}</Title>
+        <SocialLinks socials={socials} variant="buttons" />
+        <ActionLink action={resume} download icon={DownloadIcon} variant="primary" />
       </div>
     </Section>
   );

@@ -5,49 +5,49 @@
   background-color: var(--color-bg);
   display: flex;
   gap: 16px;
-  padding: 12px 16px;
+  padding: 8px 16px;
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: var(--z-header);
 
   @include tablet {
     padding: 16px 32px;
   }
 
   @include desktop {
-    display: contents;
+    background-color: transparent;
+    height: 0;
+    padding: 0;
     position: static;
   }
 }
 
 .header__nav {
-  display: none;
-}
-
-.header__nav {
   background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-line);
+  display: none;
   left: 0;
   position: absolute;
   right: 0;
   top: 100%;
-  z-index: 2;
 
   .header_open & {
     display: block;
   }
 
   @include tablet {
+    background-color: transparent;
+    border-bottom: 0;
     display: block;
-    inset: auto;
     position: static;
   }
 
   @include desktop {
-    left: max(32px, calc(50% - var(--layout-max-width) / 2));
+    left: var(--rail-inset);
     position: fixed;
-    top: 20%;
-    transform: translateY(-50%);
+    top: var(--rail-top);
+    width: max-content;
   }
 }
 
@@ -57,25 +57,24 @@
   @include desktop {
     margin-left: 0;
     position: fixed;
-    right: max(32px, calc(50% - var(--layout-max-width) / 2));
-    top: 20%;
-    transform: translateY(-50%);
+    right: var(--rail-inset);
+    top: var(--rail-top);
   }
 }
 
 .header__logo-link {
+  color: var(--color-text);
   display: block;
-  height: 32px;
-  width: 32px;
+  flex: 0 0 auto;
 
   @include desktop {
-    left: max(32px, calc(50% - var(--layout-max-width) / 2));
+    left: var(--rail-inset);
     position: fixed;
-    top: 32px;
+    top: var(--rail-logo-top);
   }
 }
 
 .header__logo {
-  height: 32px;
-  width: 32px;
+  height: 40px;
+  width: 40px;
 }

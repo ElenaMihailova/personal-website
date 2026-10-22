@@ -1,37 +1,33 @@
 @use 'breakpoints' as *;
 
-.section {
-  display: grid;
-  gap: 25px;
-  padding: 25px 16px;
+@layer section {
+  .section {
+    display: grid;
+    gap: 32px;
+    padding: 48px 16px;
+    scroll-margin-top: var(--header-offset);
 
-  @include tablet {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    padding: 25px 56px;
+    @include tablet {
+      padding: 64px 56px;
+    }
 
-    &:nth-child(even) > :first-child {
-      order: 2;
+    @include desktop {
+      scroll-margin-top: 0;
     }
   }
-}
 
-.section_reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition-duration: 420ms;
-  transition-property: opacity, transform;
-  transition-timing-function: ease;
-}
+  @media (prefers-reduced-motion: no-preference) {
+    .section_reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition-duration: var(--duration-reveal);
+      transition-property: opacity, transform;
+      transition-timing-function: var(--ease-out);
+    }
 
-.section_visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .section_reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
+    .section_visible {
+      opacity: 1;
+      transform: none;
+    }
   }
 }

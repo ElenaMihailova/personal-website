@@ -4,9 +4,9 @@ import classNames from 'classnames';
 import type { ComponentType, SVGProps } from 'react';
 
 import GithubIcon from '@/assets/icons/github.svg?react';
-import LinkedinIcon from '@/assets/icons/in.svg?react';
+import LinkedinIcon from '@/assets/icons/linkedin.svg?react';
 import EmailIcon from '@/assets/icons/mail.svg?react';
-import TelegramIcon from '@/assets/icons/tm.svg?react';
+import TelegramIcon from '@/assets/icons/telegram.svg?react';
 import { SOCIAL_LABEL } from '@/data/data';
 import type { SocialType } from '@/data/type';
 
@@ -19,29 +19,35 @@ const SocialIcon: Record<SocialType, ComponentType<SVGProps<SVGSVGElement>>> = {
   telegram: TelegramIcon,
 };
 
-function SocialLinks({ className, showLabel, socials }: SocialLinksProps) {
+function SocialLinks({ className, label, socials, variant = 'icons' }: SocialLinksProps) {
+  const hasText = variant === 'buttons';
+
   return (
-    <nav aria-label="Social links" className={classNames('social-links', className)}>
-      <ul className="social-links__list">
-        {socials.map((social) => {
-          const IconComponent = SocialIcon[social.type];
-          return (
-            <li className="social-links__item" key={social.type}>
-              <a
-                aria-label={`${SOCIAL_LABEL[social.type]}: ${social.label}`}
-                className="social-links__link"
-                href={social.href}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <IconComponent className="social-links__icon" focusable="false" />
-                {showLabel && <span className="social-links__label">{social.label}</span>}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
+    <ul
+      aria-label={label}
+      className={classNames('social-links', `social-links_${variant}`, className)}
+      role="list"
+    >
+      {socials.map((social) => {
+        const Icon = SocialIcon[social.type];
+        const isExternal = social.type !== 'email';
+
+        return (
+          <li key={social.type}>
+            <a
+              aria-label={hasText ? undefined : `${SOCIAL_LABEL[social.type]}: ${social.label}`}
+              className="social-links__link"
+              href={social.href}
+              rel={isExternal ? 'noopener noreferrer' : undefined}
+              target={isExternal ? '_blank' : undefined}
+            >
+              <Icon aria-hidden="true" className="social-links__icon" />
+              {hasText && SOCIAL_LABEL[social.type]}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 

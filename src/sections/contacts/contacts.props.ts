@@ -1,7 +1,7 @@
-import type { ContactData, ResumeData, Social } from '@/data/type';
+import type { CallToAction, ContactData, Social } from '@/data/type';
 
 export interface ContactsProps {
   contacts: ContactData;
-  resume: ResumeData;
+  resume: CallToAction;
   socials: Social[];
 }

@@ -1,15 +1,19 @@
 @use 'breakpoints' as *;
 @use 'mixins' as *;
 
+$line-offset: 5px;
+
 .burger {
   @include reset-button;
 
   display: flex;
+  flex: 0 0 auto;
   flex-direction: column;
-  height: 24px;
+  height: var(--control-height-sm);
   justify-content: space-between;
-  padding: 6px 3px;
-  width: 24px;
+  margin-left: -9px;
+  padding: 14px 9px;
+  width: var(--control-height-sm);
 
   @include tablet {
     display: none;
@@ -25,7 +29,7 @@
 }
 
 .burger_open .burger__line:nth-child(1) {
-  transform: translateY(5px) rotate(45deg);
+  transform: translateY($line-offset) rotate(45deg);
 }
 
 .burger_open .burger__line:nth-child(2) {
@@ -33,5 +37,5 @@
 }
 
 .burger_open .burger__line:nth-child(3) {
-  transform: translateY(-5px) rotate(-45deg);
+  transform: translateY(-$line-offset) rotate(-45deg);
 }

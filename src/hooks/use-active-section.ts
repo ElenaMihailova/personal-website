@@ -2,34 +2,55 @@ import { useEffect, useState } from 'react';
 
 import type { SectionId } from '@/data/section-id';
 
-const ROOT_MARGIN = '-50% 0px -50% 0px';
+const ACTIVATION_LINE = 0.4;
 
-export function useActiveSection(ids: SectionId[]): SectionId {
-  const [activeId, setActiveId] = useState<SectionId>(ids[0]);
+function findActiveSection(ids: readonly SectionId[]): SectionId | null {
+  const scrollBottom = window.scrollY + window.innerHeight;
+
+  if (scrollBottom >= document.documentElement.scrollHeight - 1) {
+    return ids.at(-1) ?? null;
+  }
+
+  const line = window.innerHeight * ACTIVATION_LINE;
+  let activeId: SectionId | null = null;
+
+  for (const id of ids) {
+    const section = document.getElementById(id);
+
+    if (section && section.getBoundingClientRect().top <= line) {
+      activeId = id;
+    }
+  }
+
+  return activeId;
+}
+
+export function useActiveSection(ids: readonly SectionId[]): SectionId | null {
+  const [activeId, setActiveId] = useState<SectionId | null>(null);
 
   useEffect(() => {
-    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
-      return;
-    }
+    let frame = 0;
 
-    const sections = ids
-      .map((id) => document.getElementById(id))
-      .filter((section) => section !== null);
+    const update = () => {
+      frame = 0;
+      setActiveId(findActiveSection(ids));
+    };
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveId(entry.target.id as SectionId);
-          }
-        });
-      },
-      { rootMargin: ROOT_MARGIN },
-    );
+    const scheduleUpdate = () => {
+      if (!frame) {
+        frame = requestAnimationFrame(update);
+      }
+    };
 
-    sections.forEach((section) => observer.observe(section));
+    update();
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
 
-    return () => observer.disconnect();
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', scheduleUpdate);
+      window.removeEventListener('resize', scheduleUpdate);
+    };
   }, [ids]);
 
   return activeId;

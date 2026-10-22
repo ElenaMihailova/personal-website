@@ -1,15 +1,23 @@
 import './footer.scss';
 
-import BackToTopIcon from '@/assets/icons/back-to-top.svg';
-import Icon from '@/components/icon';
+import ArrowUpIcon from '@/assets/icons/arrow-up.svg?react';
+import ActionLink from '@/components/action-link';
+import { data } from '@/data/data';
+import { TOP_ID } from '@/data/section-id';
+
+const YEAR = new Date().getFullYear();
 
 function Footer() {
   return (
     <footer className="footer">
-      <a className="footer__back-to-top" href="#top">
-        <Icon alt="" className="footer__icon" src={BackToTopIcon} />
-        <p className="footer__text">Back to top</p>
-      </a>
+      <p>
+        © {YEAR} {data.hero.name}
+      </p>
+      <ActionLink
+        action={{ href: `#${TOP_ID}`, label: 'Back to top' }}
+        icon={ArrowUpIcon}
+        variant="text"
+      />
     </footer>
   );
 }

@@ -1,31 +1,43 @@
 :root {
-  --color-ink: #14161a;
-  --color-paper: #f7f7f4;
+  --color-ink: #18213f;
+  --color-paper: #f3f5fa;
   --color-signal: #2a2ae6;
-  --color-sky: #a1d2ff;
-  --color-gray: #cfcfcf;
-  --color-mute: #8a8f98;
+  --color-signal-deep: #1f1fb3;
+  --color-slate: #56607f;
+  --color-white: #fff;
   --color-bg: var(--color-paper);
+  --color-card: var(--color-white);
   --color-text: var(--color-ink);
+  --color-muted: var(--color-slate);
   --color-accent: var(--color-signal);
-  --color-accent-soft: #e8e9ff;
-  --color-surface: var(--color-gray);
-  --color-social: var(--color-muted);
-  --color-nav-link: var(--color-gray);
-  --color-muted: var(--color-mute);
+  --color-accent-hover: var(--color-signal-deep);
+  --color-accent-soft: #e6e9fd;
+  --color-accent-border: #c8cfe6;
+  --color-on-accent: var(--color-white);
+  --color-positive: #1a7f4b;
+  --color-line: color-mix(in srgb, var(--color-ink) 12%, transparent);
+  --color-focus: var(--color-signal);
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'IBM Plex Sans', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
-  --layout-max-width: 1200px;
-
-  /* font size — fluid, mobile-first */
-  --font-size-display: clamp(2.5rem, 6vw + 1rem, 4.5rem);
+  --font-size-display: clamp(2.25rem, 2.5vw + 1.5rem, 3.5rem);
   --font-size-heading: clamp(2rem, 3vw + 1rem, 2.5rem);
   --font-size-body: 1.125rem;
   --font-size-label: 0.8125rem;
-
-  /* misc */
+  --font-size-small: 0.875rem;
+  --font-size-ui: 1rem;
   --line-height-body: 1.6;
-  --letter-spacing-base: 0;
-  --letter-spacing-label: 0.08em;
+  --layout-max-width: 1200px;
+  --content-max-width: 900px;
+  --rail-inset: max(32px, calc(50% - var(--layout-max-width) / 2));
+  --rail-top: 96px;
+  --rail-logo-top: 32px;
+  --header-offset: 64px;
+  --control-height: 48px;
+  --control-height-sm: 40px;
+  --z-header: 100;
+  --z-skip-link: 200;
+  --duration-fast: 150ms;
+  --duration-reveal: 320ms;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }

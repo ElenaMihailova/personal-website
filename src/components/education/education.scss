@@ -1,28 +1,27 @@
+@use 'mixins' as *;
+
 .education {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 20px;
 }
 
 .education__item {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 2px;
 }
 
 .education__degree {
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-ui);
   font-weight: 500;
 }
 
 .education__school {
   color: var(--color-muted);
+  font-size: var(--font-size-ui);
 }
 
 .education__period {
-  color: var(--color-muted);
-  font-family: var(--font-mono);
-  font-size: var(--font-size-label);
-  letter-spacing: var(--letter-spacing-label);
-  text-transform: uppercase;
+  @include mono-label;
 }

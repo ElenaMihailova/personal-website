@@ -2,6 +2,7 @@ import type { Social } from '@/data/type';
 
 export interface SocialLinksProps {
   className?: string;
+  label?: string;
   socials: Social[];
-  showLabel?: boolean;
+  variant?: 'buttons' | 'icons';
 }

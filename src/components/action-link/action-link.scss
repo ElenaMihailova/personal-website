@@ -1,0 +1,19 @@
+@use 'mixins' as *;
+
+.action-link_primary {
+  @include button;
+  @include button-primary;
+}
+
+.action-link_secondary {
+  @include button;
+  @include button-secondary;
+}
+
+.action-link_text {
+  @include text-link;
+}
+
+.action-link__icon {
+  @include icon(18px);
+}

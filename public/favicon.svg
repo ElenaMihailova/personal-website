@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="EM monogram">
-  <rect width="64" height="64" rx="14" fill="#f7f7f4" />
+  <rect width="64" height="64" rx="14" fill="#f3f5fa" />
   <path
     d="M17 17V47M17 17H31M17 47H31"
     fill="none"
-    stroke="#14161a"
+    stroke="#18213f"
     stroke-linecap="round"
     stroke-linejoin="round"
     stroke-width="5"
@@ -12,7 +12,7 @@
   <path
     d="M38 47V17L47 32L56 17V47"
     fill="none"
-    stroke="#14161a"
+    stroke="#18213f"
     stroke-linecap="round"
     stroke-linejoin="round"
     stroke-width="5"

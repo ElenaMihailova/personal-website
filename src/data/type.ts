@@ -13,16 +13,36 @@ export interface NavLink {
   label: string;
 }
 
-export interface HeroData {
-  greeting: string;
-  name: string;
-  resume: ResumeData;
-  role: string;
-}
-
-export interface ResumeData {
+export interface CallToAction {
   href: string;
   label: string;
+}
+
+export interface HeroData {
+  bubble: string;
+  lead: string;
+  name: string;
+  primaryAction: CallToAction;
+  role: string;
+  secondaryAction: CallToAction;
+  status: string;
+  title: string;
+}
+
+export interface WorkItem {
+  company: string;
+  contributions: string[];
+  period: string;
+  result?: string;
+  summary: string;
+  tags: string[];
+  title: string;
+}
+
+export interface WorkData {
+  intro: string;
+  items: WorkItem[];
+  title: string;
 }
 
 export interface EducationItem {
@@ -31,30 +51,45 @@ export interface EducationItem {
   school: string;
 }
 
+export interface LanguageItem {
+  level: string;
+  name: string;
+}
+
 export interface AboutData {
   description: string[];
   education: EducationItem[];
+  educationTitle: string;
+  languages: LanguageItem[];
+  languagesTitle: string;
+  principles: string[];
+  principlesTitle: string;
   title: string;
 }
 
+export interface SkillGroup {
+  description: string;
+  title: string;
+  tools: string[];
+}
+
 export interface SkillsData {
-  hard: string[];
-  soft: string[];
+  groups: SkillGroup[];
+  intro: string;
   title: string;
 }
 
 export interface ContactData {
-  resumeLabel: string;
   subtitle: string;
   title: string;
 }
 
 export interface ExperienceItem {
-  role: string;
   company: string;
-  period: string;
   description: string;
   meta?: string;
+  period: string;
+  role: string;
 }
 
 export interface ExperienceData {
@@ -68,6 +103,8 @@ export interface SiteData {
   experience: ExperienceData;
   hero: HeroData;
   links: NavLink[];
+  resume: CallToAction;
   skills: SkillsData;
   socials: Social[];
+  work: WorkData;
 }

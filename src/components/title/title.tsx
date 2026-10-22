@@ -1,14 +1,13 @@
 import './title.scss';
 
-import classNames from 'classnames';
-
 import type { TitleProps } from './title.props';
 
-function Title({ className, children, id }: TitleProps) {
+function Title({ children, intro }: TitleProps) {
   return (
-    <h2 className={classNames('title', className)} id={id}>
-      {children}
-    </h2>
+    <header className="title">
+      <h2 className="title__heading">{children}</h2>
+      {intro && <p className="title__intro">{intro}</p>}
+    </header>
   );
 }
 

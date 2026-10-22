@@ -2,10 +2,12 @@ import { type RefObject, useEffect } from 'react';
 
 const KEY_ESCAPE = 'Escape';
 
+export type DismissReason = 'escape' | 'outside-click';
+
 export function useDismiss(
   ref: RefObject<HTMLElement | null>,
   isActive: boolean,
-  onDismiss: () => void,
+  onDismiss: (reason: DismissReason) => void,
 ): void {
   useEffect(() => {
     if (!isActive) {
@@ -13,14 +15,14 @@ export function useDismiss(
     }
 
     const handleOutsideClick = (event: PointerEvent) => {
-      if (ref.current && !ref.current?.contains(event.target as Node)) {
-        onDismiss();
+      if (event.target instanceof Node && !ref.current?.contains(event.target)) {
+        onDismiss('outside-click');
       }
     };
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === KEY_ESCAPE) {
-        onDismiss();
+        onDismiss('escape');
       }
     };
 

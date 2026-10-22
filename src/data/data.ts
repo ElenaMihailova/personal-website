@@ -12,105 +12,214 @@ export const data: SiteData = {
   about: {
     title: 'About me',
     description: [
-      'Frontend developer (React, TypeScript) building payment and checkout features in money-critical products — subscriptions, one-time payments, promo pricing, admin payment flows.',
-      'Before tech, I spent 15 years as a chief accountant, so I read payment and financial logic from the inside.',
-      'Day to day: React, TypeScript, Next.js, config-driven architecture, testing-first (Jest, Playwright). I use AI coding agents to work faster — but I make the decisions and check every change.',
-      'Outside work, I run long distance — the same steadiness I bring to code.',
+      'Before tech, I spent 15 years as a chief accountant. So payment logic is home ground for me: I know how it works from the inside, edge cases included.',
+      'Day to day I work in React, TypeScript and Next.js, with config-driven architecture and tests first. I use AI coding agents to move faster, but I make the design calls and review every change.',
+      'Outside work, I run long distances and do CrossFit. Both take the same steadiness as shipping code.',
     ],
+    principlesTitle: 'How I work',
+    principles: [
+      'Turning vague requirements into clear, workable tasks',
+      'Challenging assumptions instead of taking specs at face value',
+      'Sweating the details in money-critical UI',
+      'Giving direct, constructive code review',
+    ],
+    educationTitle: 'Education',
     education: [
       {
         degree: 'JavaScript / Frontend',
-        period: '2022 – 2023',
+        period: '2022–2023',
         school: 'The Rolling Scopes School',
       },
       {
         degree: 'Frontend Development',
-        period: '2021 – 2022',
+        period: '2021–2022',
         school: 'HTML Academy',
       },
       {
         degree: 'Accounting, Analysis and Audit',
-        period: '1997 – 2002',
+        period: '1997–2002',
         school: 'Petrozavodsk State University',
       },
     ],
+    languagesTitle: 'Languages',
+    languages: [
+      { name: 'English', level: 'B2' },
+      { name: 'Russian', level: 'Native' },
+      { name: 'Serbian', level: 'B1' },
+    ],
   },
   contacts: {
-    resumeLabel: 'Download CV as PDF',
-    subtitle: 'I will be glad to meet you!',
-    title: 'Let’s keep in touch',
+    title: 'Let’s talk',
+    subtitle: 'Open to frontend and AI product engineering roles, remote or with relocation.',
   },
   experience: {
     title: 'Experience',
     items: [
       {
-        role: 'Frontend Developer',
-        company: 'All Funeral Services',
-        period: '12/2024 – 07/2026',
-        description:
-          'Payment & checkout in a money-critical product — Stripe/Klarna subscriptions, one-time and promo pricing — on a config-driven SSO/checkout architecture.',
-      },
-      {
         role: 'AI Product Engineer',
         company: 'HeroContent.ai',
-        period: '12/2025 – present',
         meta: 'part-time',
-        description:
-          'AI content pipeline: automated Vision-QA review, read-only audit agent with actionable alerts, and decline-reason analytics feeding back into generation.',
+        period: 'Dec 2025 – present',
+        description: 'Built automated quality control for an AI content pipeline.',
       },
       {
         role: 'Frontend Developer',
-        company: 'Earlier projects',
-        period: '2022 – 2024',
+        company: 'All Funeral Services',
+        period: 'Dec 2024 – Jul 2026',
+        description: 'Built payments, sign-in and real-time features across four products.',
+      },
+      {
+        role: 'Frontend Developer',
+        company: 'Missis Laser',
+        period: 'May 2024 – Nov 2024',
+        description: 'Built booking, partner and e-contract apps for web and React Native.',
+      },
+      {
+        role: 'Frontend Developer',
+        company: 'FullV, WebImpulse Studio, Raketa',
+        meta: 'contract',
+        period: 'Mar 2022 – Dec 2023',
         description:
-          'Web & React Native across e-commerce, booking and startup products: Missis Laser, FullV, WebImpulse, Raketa.',
+          'Built React Native and responsive web interfaces for three clients, including a Boston startup.',
       },
     ],
   },
   hero: {
-    greeting: 'My name is',
-    name: 'Elena!',
-    resume: {
-      href: '/elena-mihailova-cv.pdf',
-      label: 'Download CV',
-    },
-    role: "I'm a Frontend Developer",
+    bubble: 'Shipped!',
+    name: 'Elena Mikhailova',
+    role: 'Frontend & AI Product Engineer',
+    status: 'Based in Novi Sad, Serbia · Open to remote and relocation',
+    title: 'I build interfaces people trust with money and decisions.',
+    lead: 'Checkout and subscription flows in React and TypeScript. AI content pipelines with automated quality control. And an accountant’s eye for every number.',
+    primaryAction: { href: `#${SectionId.WORK}`, label: 'See selected work' },
+    secondaryAction: { href: `#${SectionId.CONTACTS}`, label: 'Get in touch' },
+  },
+  resume: {
+    href: '/elena-mihailova-cv.pdf',
+    label: 'Download CV (PDF)',
   },
   links: [
-    { id: SectionId.ABOUT, label: 'About me' },
+    { id: SectionId.WORK, label: 'Work' },
     { id: SectionId.EXPERIENCE, label: 'Experience' },
     { id: SectionId.SKILLS, label: 'Skills' },
-    { id: SectionId.CONTACTS, label: 'Contacts' },
+    { id: SectionId.ABOUT, label: 'About' },
+    { id: SectionId.CONTACTS, label: 'Contact' },
   ],
+  work: {
+    title: 'Selected work',
+    intro: 'Production work where correctness comes first.',
+    items: [
+      {
+        title: 'Automated quality control for an AI content pipeline',
+        company: 'HeroContent.ai',
+        period: 'Dec 2025 – present',
+        summary:
+          'A social media platform for restaurants generates posts with AI. Manual visual review was rejecting about 40% of the content.',
+        contributions: [
+          'Automated Vision QA audit with issue-specific gates to cut false positives',
+          'Read-only, tool-using agent that flags plan, calendar and approval gaps in Telegram',
+          'Rejection-reason analytics feeding back into prompts and templates',
+        ],
+        result: 'Manual image review down to zero.',
+        tags: ['Claude API', 'OpenAI API', 'TypeScript', 'Python', 'AI agents'],
+      },
+      {
+        title: 'Payments and sign-in across a four-product platform',
+        company: 'All Funeral Services',
+        period: 'Dec 2024 – Jul 2026',
+        summary:
+          'An internal operations system, a white-label memorial site, a subscription and payments product and a configurable sign-in service.',
+        contributions: [
+          'Stripe and Klarna checkout: subscriptions, one-time payments and promo pricing',
+          'Runtime config for SSO sign-in methods and a config-driven checkout flow',
+          'Real-time chat, Firebase auth with four providers and English/Hebrew RTL',
+        ],
+        tags: ['React', 'TypeScript', 'Stripe', 'Klarna', 'Firebase', 'Playwright'],
+      },
+      {
+        title: 'Web and mobile apps for a 6-clinic chain',
+        company: 'Missis Laser',
+        period: 'May 2024 – Nov 2024',
+        summary:
+          'A chain of six clinics moved bookings, partners and contracts online — on the web and on mobile.',
+        contributions: [
+          'Partner program and e-contract web apps',
+          'Online booking on the web and in a React Native mobile app',
+          'amoCRM integration and bots that automate booking and request handling',
+        ],
+        tags: ['React', 'React Native', 'amoCRM'],
+      },
+    ],
+  },
   skills: {
-    hard: [
-      'React & TypeScript — hooks, context, modern frontend patterns',
-      'Next.js — SSR/SSG, routing, production application structure',
-      'State & data flow — Redux Toolkit, MobX, REST API integration',
-      'Payments & checkout — Stripe, Klarna, subscriptions, promo pricing',
-      'Responsive, accessible UI — SCSS, Tailwind, Figma-to-code, i18n',
-      'Performance & quality — Core Web Vitals, loading speed, production UX',
-      'Testing — Jest, React Testing Library, Playwright, unit/component/E2E coverage',
-      'Tooling & delivery — Storybook, Git, CI/CD, Vite, Webpack, npm scripts, AI coding agents',
-    ],
-    soft: [
-      'Strong on payment & money logic (15 years in finance)',
-      'Turning vague requirements into clear, workable tasks',
-      'Questioning assumptions, not taking specs at face value',
-      'Care with detail on money-critical UI',
-      'Direct, constructive feedback in code review',
-      'Reliable delivery, end to end',
-    ],
     title: 'Skills',
+    intro: 'Grouped by what I deliver, not by what I’ve installed.',
+    groups: [
+      {
+        title: 'AI product engineering',
+        description:
+          'Quality control for a production AI content pipeline: automated visual review, error analysis and a monitoring agent — so output is measured, not eyeballed.',
+        tools: [
+          'Automated visual QA (vision models)',
+          'Error analysis',
+          'Prompt & template routing',
+          'Read-only tool-using agents',
+          'LLM APIs: Claude, OpenAI',
+          'Python',
+        ],
+      },
+      {
+        title: 'Product UI',
+        description:
+          'Responsive, accessible web and mobile interfaces from Figma to production, including right-to-left languages.',
+        tools: [
+          'TypeScript',
+          'React',
+          'Next.js',
+          'React Native',
+          'Redux Toolkit',
+          'Tailwind CSS / SCSS',
+          'Accessibility (WCAG)',
+          'i18n & RTL',
+        ],
+      },
+      {
+        title: 'Payments, auth & real-time',
+        description:
+          'Checkout, subscriptions and promo pricing, sign-in and live chat across four products — with 15 years of accounting behind every edge case.',
+        tools: [
+          'Stripe subscriptions & checkout',
+          'Klarna',
+          'Config-driven checkout',
+          'Firebase Auth / SSO',
+          'Stream Chat / WebSocket',
+          'Analytics & deep links',
+        ],
+      },
+      {
+        title: 'Quality & delivery',
+        description:
+          'Every change tested and reviewed — including code written with AI assistants.',
+        tools: [
+          'Jest',
+          'React Testing Library',
+          'Playwright',
+          'Storybook component library',
+          'GitHub Actions',
+          'Vite',
+          'AI-assisted coding: Claude Code, Cursor, Copilot',
+        ],
+      },
+    ],
   },
   socials: [
-    { href: 'https://github.com/ElenaMihailova', label: 'ElenaMikhailova', type: 'github' },
+    { href: 'mailto:mihailova.dev@gmail.com', label: 'mihailova.dev@gmail.com', type: 'email' },
     { href: 'https://t.me/Elena_Mikhailova_dev', label: 'Elena_Mikhailova_dev', type: 'telegram' },
     {
       href: 'https://www.linkedin.com/in/elena-mikhailova-dev',
       label: 'elena-mikhailova-dev',
       type: 'linkedin',
     },
-    { href: 'mailto:mihailova.dev@gmail.com', label: 'Mikhailova.dev@gmail.com', type: 'email' },
+    { href: 'https://github.com/ElenaMihailova', label: 'Elena Mikhailova', type: 'github' },
   ],
 };
