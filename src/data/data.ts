@@ -13,7 +13,7 @@ export const data: SiteData = {
     title: 'About me',
     description: [
       'Before tech, I spent 15 years as a chief accountant, so payment logic is second nature to me — edge cases included.',
-      'Day to day, I work with React, TypeScript and Next.js, favoring config-driven architecture and writing tests first. I use AI coding agents to move faster, but I make the design calls and review every change.',
+      'Day to day, I work with React, TypeScript and Node.js, favoring config-driven architecture and writing tests first. I use AI coding agents to move faster, but I make the design calls and review every change.',
       'Outside work, I’m a long-distance runner and do CrossFit.',
     ],
     principlesTitle: 'How I work',
@@ -162,6 +162,7 @@ export const data: SiteData = {
           'Prompt & template routing',
           'Read-only tool-using agents',
           'LLM APIs: Claude, OpenAI',
+          'Node.js',
           'Python',
         ],
       },
@@ -172,7 +173,6 @@ export const data: SiteData = {
         tools: [
           'TypeScript',
           'React',
-          'Next.js',
           'React Native',
           'Redux Toolkit',
           'Tailwind CSS / SCSS',
