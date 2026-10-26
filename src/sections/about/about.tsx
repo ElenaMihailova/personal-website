@@ -17,11 +17,14 @@ function About({ about }: AboutProps) {
         ))}
       </div>
       <div className="about__columns">
-        <div className="about__column">
+        <div className="about__column about__column_wide">
           <h3 className="about__subtitle">{about.principlesTitle}</h3>
           <ul className="about__principles">
             {about.principles.map((principle) => (
-              <li key={principle}>{principle}</li>
+              <li key={principle.title}>
+                <strong className="about__principle-title">{principle.title}</strong>{' '}
+                {principle.text}
+              </li>
             ))}
           </ul>
         </div>

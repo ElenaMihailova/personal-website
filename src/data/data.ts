@@ -13,15 +13,23 @@ export const data: SiteData = {
     title: 'About me',
     description: [
       'Before tech, I spent 15 years as a chief accountant, so payment logic is second nature to me — edge cases included.',
-      'Day to day, I work with React, TypeScript and Node.js, favoring config-driven architecture and writing tests first. I use AI coding agents to move faster, but I make the design calls and review every change.',
+      'Day to day, I take features from a rough request to production and keep them running. React, TypeScript and Node.js, config-driven architecture, AI coding agents for speed — and every design call and every merge is still mine.',
       'Outside work, I’m a long-distance runner and do CrossFit.',
     ],
     principlesTitle: 'How I work',
     principles: [
-      'Turning vague requirements into clear, workable tasks',
-      'Challenging assumptions instead of taking specs at face value',
-      'Sweating the details in money-critical UI',
-      'Giving direct, constructive code review',
+      {
+        title: 'Built for the next change.',
+        text: 'What will change lives in config, so the next request is a settings change, not a new deploy.',
+      },
+      {
+        title: 'Launch is the midpoint.',
+        text: 'I watch what real users do with a feature and turn every failed or rejected case into the next improvement.',
+      },
+      {
+        title: 'Reconcile, then trust.',
+        text: 'Fifteen years of closing books taught me that totals add up before anyone signs off. My checkout flows and AI features answer to the same rule.',
+      },
     ],
     educationTitle: 'Education',
     education: [
@@ -86,8 +94,8 @@ export const data: SiteData = {
     name: 'Elena Mikhailova',
     role: 'Frontend & AI Product Engineer',
     status: 'Based in Novi Sad, Serbia · Open to remote work and relocation',
-    title: 'I build interfaces people trust with their money.',
-    lead: 'Checkout and subscription flows in React and TypeScript. AI content pipelines with automated quality control. And an accountant’s eye for the numbers.',
+    title: 'I build the features a product can’t afford to get wrong.',
+    lead: 'Checkout, sign-in, real-time chat, bookings and AI pipelines in React, TypeScript and Node.js — shipped to production and kept running after launch.',
     primaryAction: { href: `#${SectionId.WORK}`, label: 'See selected work' },
     secondaryAction: { href: `#${SectionId.CONTACTS}`, label: 'Get in touch' },
   },
@@ -104,18 +112,18 @@ export const data: SiteData = {
   ],
   work: {
     title: 'Selected work',
-    intro: 'Production work where correctness comes first.',
+    intro: 'Products I built and kept answering for after launch.',
     items: [
       {
-        title: 'Automated quality control for an AI content pipeline',
+        title: 'An AI content pipeline that checks its own output',
         company: 'HeroContent.ai',
         period: 'Dec 2025 – present',
         summary:
           'A social media platform for restaurants generates posts with AI. Manual visual review was rejecting about 40% of the content.',
         contributions: [
-          'Automated Vision QA audit with issue-specific gates to cut false positives',
-          'Read-only, tool-using agent that audits plans, calendars and approvals and posts alerts to Telegram',
-          'Rejection-reason analytics feeding back into prompts and templates',
+          'Built a vision-model review step with issue-specific rules, so only real defects get blocked',
+          'Built a monitoring agent that watches every client’s plans, calendars and approvals and alerts the team in Telegram',
+          'Turned rejection reasons into analytics that feed back into prompts and templates',
         ],
         result: 'Manual image review down to zero.',
         tags: ['Claude API', 'OpenAI API', 'TypeScript', 'Python', 'AI agents'],
@@ -155,9 +163,9 @@ export const data: SiteData = {
       {
         title: 'AI product engineering',
         description:
-          'Quality control for a production AI content pipeline: automated visual review, error analysis and a monitoring agent — so output is measured, not eyeballed.',
+          'LLM features in production, built with their own measurement: vision-model review, error analysis and a monitoring agent.',
         tools: [
-          'Automated visual QA (vision models)',
+          'Vision-model review',
           'Error analysis',
           'Prompt & template routing',
           'Read-only tool-using agents',
@@ -194,9 +202,9 @@ export const data: SiteData = {
         ],
       },
       {
-        title: 'Quality & delivery',
+        title: 'Delivery & reliability',
         description:
-          'Every change tested and reviewed — including code written with AI assistants.',
+          'I ship and support what I build: tests on critical flows, CI, and AI-written code reviewed before it merges.',
         tools: [
           'Jest',
           'React Testing Library',

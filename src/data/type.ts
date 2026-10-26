@@ -56,13 +56,18 @@ export interface LanguageItem {
   name: string;
 }
 
+export interface Principle {
+  text: string;
+  title: string;
+}
+
 export interface AboutData {
   description: string[];
   education: EducationItem[];
   educationTitle: string;
   languages: LanguageItem[];
   languagesTitle: string;
-  principles: string[];
+  principles: Principle[];
   principlesTitle: string;
   title: string;
 }
